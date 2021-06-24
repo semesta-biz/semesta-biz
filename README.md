@@ -1,4 +1,4 @@
-<img src="https://cdn.statically.io/gh/craigary/nobelium/main/Nobelium-Logo.svg" width="50" height="50">
+<img src="https://cdn.statically.io/gh/semesta-biz/semesta-biz/main/logo.png" width="50" height="50">
 
 # Nobelium [![Netlify Status](https://api.netlify.com/api/v1/badges/ee374a68-d2a1-432e-9bcf-a7fe012e1168/deploy-status)](https://app.netlify.com/sites/semesta/deploys)
 
