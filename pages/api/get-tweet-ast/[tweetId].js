@@ -27,7 +27,7 @@ const handler = async (event, context) => {
       body: JSON.stringify({ error: 'method not allowed' })
     };
   }
-  const tweetId = req.query.tweetId
+  const tweetId = event.queryStringParameters.tweetId
 
   if (!tweetId) {
     return {
