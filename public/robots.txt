@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://semesta-biz.vercel.app
+
+# Sitemaps
+Sitemap: https://semesta-biz.vercel.app/sitemap.xml

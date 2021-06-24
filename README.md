@@ -1,6 +1,6 @@
 <img src="https://cdn.statically.io/gh/craigary/nobelium/main/Nobelium-Logo.svg" width="50" height="50">
 
-# Nobelium
+# Nobelium [![Netlify Status](https://api.netlify.com/api/v1/badges/ee374a68-d2a1-432e-9bcf-a7fe012e1168/deploy-status)](https://app.netlify.com/sites/semesta/deploys)
 
 A static blog build on top of Notion and Nextjs, deployed on [Vercel](https://vercel.com?utm_source=Craigary&utm_campaign=oss).
 
@@ -63,10 +63,6 @@ Demo: [https://nobelium.vercel.app/](https://nobelium.vercel.app/)
   - `NOTION_ACCESS_TOKEN` (Optional): If you decide not to share your database, you can use token to let Nobelium grab data from Notion database. You can find it in your browser cookies called `token_v2`
     - Keep in mind Notion token is only valid for 180 days, make sure to update manually in vercel dashboard, we probably switch to Official API to resolve this issue in the future. Also, images in Notion database will not properly rendered
 - **That's it!** Easy-peasy?
-
-<details><summary>Wait for a sec, what is Page ID？</summary>
-  <img src="https://github.com/craigary/nobelium/blob/main/pageid.png?raw=true">
-</details>
 
 ## Roadmap
 
