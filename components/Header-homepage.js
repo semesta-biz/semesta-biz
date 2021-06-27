@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
+// import Image from 'next/image';
 
 import BLOG from '@/blog.config';
 import { useLocale } from '@/lib/locale';
@@ -69,10 +69,10 @@ const Header = () => {
           <Link href="/">
             <a>
               <div>
-                <Image 
+                <img 
                   src="https://cdn.statically.io/gh/semesta-biz/semesta-biz/main/logo.png"
-                  width={64}
-                  height={64}
+                  width="64px"
+                  height="64px"
                   className="transform"
                 />
               </div>

@@ -1,5 +1,5 @@
-import Image from 'next/image';
-import ChartSvg from '../public/img/chart.svg';
+// import Image from 'next/image';
+// import ChartSvg from '../public/img/chart.svg';
 
 import Header from '@/components/Header-homepage';
 import BLOG from '@/blog.config';
@@ -49,9 +49,9 @@ const blog = () => {
                   </div>
                 </div>
                 <div className="relative max-w-screen-sm mx-auto lg:max-w-none lg:-ml-12 lg:mr-0 xl:-ml-6">
-                  <Image
+                  <img
                     src="https://assets.website-files.com/5e835117fba7fd79f7b4001a/5e9f708b779fa20d0efbd429_image_02_transformacao.png" 
-                    width={570} height={646} />
+                    width="570px" height="646px" />
                 </div>
               </div>
             </div>
@@ -84,7 +84,7 @@ const blog = () => {
         </div>
       </div>
       
-      <Image src={ChartSvg} />
+      <img src="/img/chart.svg" />
       <div className="bg-gray-50 dark:bg-gray-800 border-t border-b border-gray-50">
         <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
           <div>
@@ -113,11 +113,10 @@ const blog = () => {
             <a>Contact</a>
           </div>
           <div className="py-3 flex items-center">
-            <Image 
+            <img 
               src="https://cdn.statically.io/gh/semesta-biz/semesta-biz/main/logo.png"
-              width={64}
-              height={64}
-              className="transform"
+              width="64px"
+              height="64px"
             />
             <div className="ml-2">
               <p className="font-medium text-xl">

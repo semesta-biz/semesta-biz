@@ -16,7 +16,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "postbuild": "next-sitemap --config next-sitemap.config.js"
+    "postbuild": "next-sitemap --config next-sitemap.config.js",
+    "netlify": "next-on-netlify"
   },
   "dependencies": {
     "feed": "^4.2.2",
