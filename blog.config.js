@@ -1,7 +1,7 @@
 const BLOG = {
-  title: 'Semesta Biz',
+  title: 'SEMESTA BIZ',
   author: 'Benz',
-  email: 'damai@semesta.biz',
+  email: 'hello@semesta.biz',
   link: 'https://semesta-biz.vercel.app',
   description: 'Empowering growth with real force',
   lang: 'en-US', // ['en-US', 'zh-CN', 'zh-HK', 'zh-TW', 'ja-JP']

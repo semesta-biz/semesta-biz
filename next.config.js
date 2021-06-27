@@ -2,7 +2,7 @@ module.exports = {
   webpack5: true,
   target: 'serverless',
   images: {
-    domains: ['gravatar.com']
+    domains: ['gravatar.com', 'cdn.statically.io', 'assets.website-files.com']
   },
   async headers() {
     return [

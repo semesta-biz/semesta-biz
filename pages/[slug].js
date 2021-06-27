@@ -6,6 +6,7 @@ import { createHash } from 'crypto'
 
 const BlogPost = ({ post, blockMap, emailHash }) => {
   if (!post) return null
+  console.log(post)
   return (
     <>
       {post.fullWidth ? (

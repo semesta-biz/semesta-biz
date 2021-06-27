@@ -61,7 +61,7 @@ const Container = ({ children, layout, fullWidth, ...customMeta }) => {
         )}
       </Head>
       <div
-        className={`wrapper ${
+        className={`min-h-screen flex flex-nowrap items-stretch justify-start flex-col ${
           BLOG.font === 'serif' ? 'font-serif' : 'font-sans'
         }`}
       >
