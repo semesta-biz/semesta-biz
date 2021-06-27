@@ -43,9 +43,9 @@ const blog = () => {
               <div className="lg:flex">
                 <div className="flex-none relative z-10 flex flex-col items-start lg:pt-10 max-w-screen-sm mx-auto lg:max-w-2xl lg:mx-0 lg:pr-20 mb-12 sm:mb-16 lg:mb-0">
                   <h1 className="text-4xl sm:text-6xl lg:text-7xl leading-none font-extrabold tracking-tight text-gray-900 mt-10 mb-8 sm:mt-14 sm:mb-10 dark:text-white">WE CONNECT PEOPLE TO DATA AND TECHNOLOGY</h1>
-                  <p className="max-w-screen-lg text-lg sm:text-2xl sm:leading-10 font-medium text-gray-500 mb-10 sm:mb-11 dark:text-gray-200">We believe in technology to solve people's problems and generate measurable results for customers.</p>
+                  <p className="max-w-screen-lg text-lg sm:text-2xl sm:leading-10 font-medium text-gray-500 mb-10 sm:mb-11 dark:text-gray-200">We believe in technology to solve people&apos;s problems and generate measurable results for customers.</p>
                   <div className="flex flex-wrap space-y-4 sm:space-y-0 sm:space-x-4 text-center">
-                    <a className="w-full sm:w-auto flex-none bg-gray-900 hover:bg-gray-700 text-white text-lg leading-6 font-semibold py-3 px-6 border border-transparent rounded-xl focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-gray-900 focus:outline-none transition-colors duration-200">Let's Talk</a>
+                    <a className="w-full sm:w-auto flex-none bg-gray-900 hover:bg-gray-700 text-white text-lg leading-6 font-semibold py-3 px-6 border border-transparent rounded-xl focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-gray-900 focus:outline-none transition-colors duration-200">Let&apos;s Talk</a>
                   </div>
                 </div>
                 <div className="relative max-w-screen-sm mx-auto lg:max-w-none lg:-ml-12 lg:mr-0 xl:-ml-6">
