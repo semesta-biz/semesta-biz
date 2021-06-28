@@ -88,7 +88,9 @@ const blog = () => {
                 <div className="relative max-w-screen-sm mx-auto lg:max-w-none lg:-ml-12 lg:mr-0 xl:-ml-6">
                   <img
                     src="https://assets.website-files.com/5e835117fba7fd79f7b4001a/5e9f708b779fa20d0efbd429_image_02_transformacao.png" 
-                    width="570px" height="646px" />
+                    width="570px" height="646px"
+                    className="min-w-[570px]"
+                  />
                 </div>
               </div>
             </div>
