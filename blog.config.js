@@ -2,7 +2,7 @@ const BLOG = {
   title: 'SEMESTA BIZ',
   author: 'Benz',
   email: 'hello@semesta.biz',
-  link: 'https://semesta-biz.vercel.app',
+  link: 'https://semesta.biz',
   description: 'Empowering growth with real force',
   lang: 'en-US', // ['en-US', 'zh-CN', 'zh-HK', 'zh-TW', 'ja-JP']
   appearance: 'auto', // ['light', 'dark', 'auto'],
@@ -16,7 +16,7 @@ const BLOG = {
   showAbout: true, // WIP
   showArchive: true, // WIP
   autoCollapsedNavBar: false, // the automatically collapsed navigation bar
-  socialLink: 'https://twitter.com/semestamart',
+  socialLink: 'https://twitter.com/semestabiz',
   seo: {
     keywords: ['Blog', 'Website', 'Techie'],
     googleSiteVerification: '' // Remove the value or replace it with your own google site verification code

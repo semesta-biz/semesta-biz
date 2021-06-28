@@ -1,5 +1,6 @@
 // import Image from 'next/image';
 // import ChartSvg from '../public/img/chart.svg';
+import Head from 'next/head';
 
 import Footer from '@/components/Footer';
 import Header from '@/components/Header-homepage';
@@ -35,6 +36,41 @@ const features = [
 const blog = () => {
   return (
     <>
+      <Head>
+        <title>{BLOG.title}</title>
+        <meta content={BLOG.darkBackground} name="theme-color" />
+        <meta name="robots" content="follow, index" />
+        <meta charSet="UTF-8" />
+        {BLOG.seo.googleSiteVerification && (
+          <meta
+            name="google-site-verification"
+            content={BLOG.seo.googleSiteVerification}
+          />
+        )}
+        {BLOG.seo.keywords && (
+          <meta name="keywords" content={BLOG.seo.keywords.join(', ')} />
+        )}
+        <meta name="description" content={BLOG.description} />
+        <meta property="og:locale" content={BLOG.lang} />
+        <meta property="og:title" content={BLOG.title} />
+        <meta property="og:description" content={BLOG.description} />
+        <meta
+          property="og:url"
+          content={BLOG.link}
+        />
+        <meta
+          property="og:image"
+          content="https://cdn.statically.io/gh/semesta-biz/semesta-biz/main/logo.png"
+        />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:description" content={BLOG.description} />
+        <meta name="twitter:title" content={BLOG.title} />
+        <meta
+          name="twitter:image"
+          content="https://cdn.statically.io/gh/semesta-biz/semesta-biz/main/logo.png"
+        />
+      </Head>
       <div className="bg-gradient-to-r from-blue-400 dark:from-white to-pink-500 via-transparent dark:via-blue-600 animate-gradient-xy bg-auto">
         <Header navBarTitle={BLOG.title}/>
         <header className={`relative max-w-screen-lg xl:max-w-screen-xl mx-auto ${
