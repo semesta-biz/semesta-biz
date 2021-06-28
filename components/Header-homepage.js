@@ -115,25 +115,30 @@ const Header = () => {
           leaveTo="opacity-0 translate-y-1"
         >
           <Popover.Panel
-            static
             focus
-            className="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden z-50"
+            className="fixed inset-0 top-px px-2 md:hidden z-50"
           >
             <div className="bg-white rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden divide-y-2 divide-gray-50">
               <div className="pt-5 pb-6 px-5">
                 <div className="flex items-center justify-between">
-                  <Link href="/">
-                    <a>
-                      <div>
-                        <img 
-                          src="https://cdn.statically.io/gh/semesta-biz/semesta-biz/main/logo.png"
-                          width="64px"
-                          height="64px"
-                          className="transform"
-                        />
-                      </div>
-                    </a>
-                  </Link>
+                  <div className="flex items-center">
+                    <Link href="/">
+                      <a>
+                        <div>
+                          <img 
+                            src="https://cdn.statically.io/gh/semesta-biz/semesta-biz/main/logo.png"
+                            width="64px"
+                            height="64px"
+                            className="transform"
+                          />
+                        </div>
+                      </a>
+                    </Link>
+                    <p className="ml-2 font-medium text-md">
+                      {BLOG.title}
+                    </p>
+                  </div>
+                  
                   <div className="-mr-2">
                     <button onClick={toggle} className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
                       <span className="sr-only">Close menu</span>
@@ -145,7 +150,7 @@ const Header = () => {
                 </div>
                 <div className="mt-6">
                   <nav className="grid gap-y-8">
-                    <Link href="/about-us">
+                    <Link href="/about">
                       <a className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">About us</a>
                     </Link>
                     <Link href="/our-values">

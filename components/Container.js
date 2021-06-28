@@ -1,4 +1,4 @@
-import Header from '@/components/Header'
+import Header from '@/components/Header-homepage'
 import Footer from '@/components/Footer'
 import BLOG from '@/blog.config'
 import Head from 'next/head'

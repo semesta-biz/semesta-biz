@@ -30,6 +30,10 @@ svg + .notion-page-title-text {
   color: inherit;
 }
 
+.notion-text-children {
+  @apply pl-0;
+}
+
 .notion-bookmark .notion-bookmark-title,
 .notion-bookmark .notion-bookmark-link div {
   @apply text-gray-900 dark:text-gray-200;

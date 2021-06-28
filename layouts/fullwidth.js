@@ -1,13 +1,13 @@
-import Image from 'next/image'
+import { useRouter } from 'next/router';
+import dynamic from 'next/dynamic';
+import { NotionRenderer, Equation, Code, CollectionRow } from 'react-notion-x'
+
 import Container from '@/components/Container'
 import TagItem from '@/components/TagItem'
-import { useRouter } from 'next/router'
-import { NotionRenderer, Equation, Code, CollectionRow } from 'react-notion-x'
 import BLOG from '@/blog.config'
 import formatDate from '@/lib/formatDate'
-import dynamic from 'next/dynamic'
-import 'gitalk/dist/gitalk.css'
 import { useLocale } from '@/lib/locale'
+import 'gitalk/dist/gitalk.css'
 
 const GitalkComponent = dynamic(
   () => {
@@ -53,7 +53,7 @@ const FullWidthLayout = ({ children, blockMap, frontMatter, emailHash }) => {
           <nav className="flex mt-7 items-start text-gray-500 dark:text-gray-400">
             <div className="flex mb-4">
               <a href={BLOG.socialLink || '#'} className="flex">
-                <Image
+                <img
                   alt={BLOG.author}
                   width={24}
                   height={24}

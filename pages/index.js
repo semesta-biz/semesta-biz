@@ -1,6 +1,7 @@
 // import Image from 'next/image';
 // import ChartSvg from '../public/img/chart.svg';
 
+import Footer from '@/components/Footer';
 import Header from '@/components/Header-homepage';
 import BLOG from '@/blog.config';
 
@@ -34,7 +35,7 @@ const features = [
 const blog = () => {
   return (
     <>
-      <div className="bg-gradient-to-r from-blue-400 dark:from-white to-pink-500 via-transparent dark:via-blue-600 animate-gradient-xy">
+      <div className="bg-gradient-to-r from-blue-400 dark:from-white to-pink-500 via-transparent dark:via-blue-600 animate-gradient-xy bg-auto">
         <Header navBarTitle={BLOG.title}/>
         <header className={`relative max-w-screen-lg xl:max-w-screen-xl mx-auto ${
             BLOG.font === 'serif' ? 'font-serif' : 'font-sans'
@@ -103,30 +104,7 @@ const blog = () => {
           </div>
         </div>
       </div>
-      <footer className="bg-gray-50 pt-16 pb-12 sm:pt-20 md:pt-24 xl:pt-32 sm:pb-20">
-        <div className="max-w-screen-lg xl:max-w-screen-xl mx-auto divide-y divide-gray-200 px-4 sm:px-6 md:px-8">
-          <div className="lg:flex justify-evenly">
-            <a>About Us</a>
-            <a>Approach</a>
-            <a>Mission</a>
-            <a>Our Values</a>
-            <a>Contact</a>
-          </div>
-          <div className="py-3 flex items-center">
-            <img 
-              src="https://cdn.statically.io/gh/semesta-biz/semesta-biz/main/logo.png"
-              width="64px"
-              height="64px"
-            />
-            <div className="ml-2">
-              <p className="font-medium text-xl">
-                {BLOG.title}
-              </p>
-              <span>No. 1-120, Tingkat 1, Jalan PUJ 3/8, Taman Puncak Jalil, 43300 Seri Kembangan, Selangor Darul Ehsan</span>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer fullWidth={true} />
     </>
   )
 }
