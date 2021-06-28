@@ -12,7 +12,7 @@ const Footer = ({ fullWidth }) => {
     >
       <hr className="border-gray-200 dark:border-gray-600" />
       <div className="my-4">
-        <div className="flex justify-between items-end">
+        <div className="flex flex-col md:flex-row justify-between items-end">
           <div className="space-y-3">
             <Link href="/">
               <a>
@@ -61,9 +61,9 @@ const Footer = ({ fullWidth }) => {
             </ul>         
           </div>
           
-          <div>
-            <p className="inline-block">Copyright 2020 - 2021 @ {BLOG.title} - All rights reserved / Proudly powered by </p>
-            <Vercel />
+          <div className="mt-3 md:mt-0 align-baseline">
+            Copyright 2020 - 2021 @ {BLOG.title} - All rights reserved / Proudly powered by <Vercel />
+            
           </div>
         </div>
       </div>

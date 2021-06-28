@@ -40,7 +40,7 @@ const blog = () => {
         <header className={`relative max-w-screen-lg xl:max-w-screen-xl mx-auto ${
             BLOG.font === 'serif' ? 'font-serif' : 'font-sans'
           }`}>
-            <div className="px-4 sm:px-6 md:px-8 my-14 sm:my-20 xl:my-8">
+            <div className="px-4 sm:px-6 md:px-8 my-10 xl:my-8">
               <div className="lg:flex">
                 <div className="flex-none relative z-10 flex flex-col items-start lg:pt-10 max-w-screen-sm mx-auto lg:max-w-2xl lg:mx-0 lg:pr-20 mb-12 sm:mb-16 lg:mb-0">
                   <h1 className="text-4xl sm:text-6xl lg:text-7xl leading-none font-extrabold tracking-tight text-gray-900 mt-10 mb-8 sm:mt-14 sm:mb-10 dark:text-white">WE CONNECT PEOPLE TO DATA AND TECHNOLOGY</h1>

@@ -46,7 +46,7 @@ const FullWidthLayout = ({ children, blockMap, frontMatter, emailHash }) => {
       fullWidth={frontMatter.fullWidth}
     >
       <article>
-        <h1 className="font-bold text-3xl text-black dark:text-white">
+        <h1 className="font-bold text-3xl text-black dark:text-white mt-6 md:mt-0">
           {frontMatter.title}
         </h1>
         {frontMatter.type[0] !== 'Page' && (

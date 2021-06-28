@@ -83,7 +83,7 @@ const Header = () => {
                   src="https://cdn.statically.io/gh/semesta-biz/semesta-biz/main/logo.png"
                   width="64px"
                   height="64px"
-                  className="transform"
+                  className="min-w-[64px]"
                 />
               </div>
             </a>
@@ -128,7 +128,7 @@ const Header = () => {
                             src="https://cdn.statically.io/gh/semesta-biz/semesta-biz/main/logo.png"
                             width="64px"
                             height="64px"
-                            className="transform"
+                            className="min-w-[64px]"
                           />
                         </div>
                       </a>
