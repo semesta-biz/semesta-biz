@@ -1,5 +1,6 @@
-import { useEffect, useRef } from 'react';
+import { useCallback, useEffect, useRef, useState, Fragment } from 'react';
 import Link from 'next/link';
+import { Popover, Transition } from '@headlessui/react';
 // import Image from 'next/image';
 
 import BLOG from '@/blog.config';
@@ -9,19 +10,18 @@ const NavBar = () => {
   const locale = useLocale();
   const links = [
     { id: 0, name: locale.NAV.INDEX, to: BLOG.path || '/', show: true },
-    { id: 1, name: locale.NAV.MISSION, to: '/mission', show: BLOG.showAbout },
+    { id: 1, name: locale.NAV.MISSION, to: '/about', show: BLOG.showAbout },
     { id: 2, name: locale.NAV.OURVALUES, to: '/our-values', show: true },
-    { id: 3, name: locale.NAV.CONTACT, to: '/contact', show: true }
-  ]
+  ];
   return (
-    <div className="flex-shrink-0">
-      <ul className="flex flex-row space-x-4">
+    <div className={`hidden md:flex flex-shrink-0`}>
+      <ul className="flex flex-row space-x-4 items-center">
         {links.map(
           link =>
             link.show && (
               <li
                 key={link.id}
-                className="block text-black dark:text-gray-50 nav"
+                className="block text-black dark:text-gray-50"
               >
                 <Link href={link.to}>
                   <a>{link.name}</a>
@@ -29,12 +29,20 @@ const NavBar = () => {
               </li>
             )
         )}
+        <li>
+          <Link href="/contact">
+            <a className="whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-blue-600 hover:bg-blue-700">
+              Contact
+            </a>
+          </Link>
+        </li>
       </ul>
     </div>
   )
 }
 
 const Header = () => {
+  const [open, setOpen] = useState(false);
   const navRef = useRef(null);
   const sentinalRef = useRef([]);
   const handler = ([entry]) => {
@@ -55,6 +63,9 @@ const Header = () => {
       }
     }
   };
+  const toggle = useCallback(() => {
+    setOpen((prevState) => !prevState);
+  }, []);
 
   useEffect(() => {
     const observer = new window.IntersectionObserver(handler);
@@ -82,8 +93,76 @@ const Header = () => {
             {BLOG.title}
           </p>
         </div>
-        <NavBar />
+        <div className="-mr-2 -my-2 md:hidden">
+          <button onClick={toggle} className="bg-black p-2 inline-flex items-center justify-center text-white hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+            <span className="sr-only">Open menu</span>
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h8m-8 6h16" />
+            </svg>
+          </button>
+        </div>
+        <NavBar open={open} />
       </div>
+      <Popover>
+        <Transition
+          show={open}
+          as={Fragment}
+          enter="transition ease-out duration-200"
+          enterFrom="opacity-0 translate-y-1"
+          enterTo="opacity-100 translate-y-0"
+          leave="transition ease-in duration-150"
+          leaveFrom="opacity-100 translate-y-0"
+          leaveTo="opacity-0 translate-y-1"
+        >
+          <Popover.Panel
+            static
+            focus
+            className="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden z-50"
+          >
+            <div className="bg-white rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden divide-y-2 divide-gray-50">
+              <div className="pt-5 pb-6 px-5">
+                <div className="flex items-center justify-between">
+                  <Link href="/">
+                    <a>
+                      <div>
+                        <img 
+                          src="https://cdn.statically.io/gh/semesta-biz/semesta-biz/main/logo.png"
+                          width="64px"
+                          height="64px"
+                          className="transform"
+                        />
+                      </div>
+                    </a>
+                  </Link>
+                  <div className="-mr-2">
+                    <button onClick={toggle} className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                      <span className="sr-only">Close menu</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div className="mt-6">
+                  <nav className="grid gap-y-8">
+                    <Link href="/about-us">
+                      <a className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">About us</a>
+                    </Link>
+                    <Link href="/our-values">
+                      <a className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">Our Values</a>
+                    </Link>
+                  </nav>
+                </div>
+              </div>
+              <div className="py-6 px-5 space-y-6 flex justify-center bg-gray-100">
+                <a className="whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-blue-600 hover:bg-blue-700">
+                  Contact
+                </a>
+              </div>
+            </div>
+          </Popover.Panel>
+        </Transition>
+      </Popover>
     </>
   )
 }

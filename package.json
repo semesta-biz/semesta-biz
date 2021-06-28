@@ -20,6 +20,7 @@
     "netlify": "next-on-netlify"
   },
   "dependencies": {
+    "@headlessui/react": "^1.3.0",
     "feed": "^4.2.2",
     "gitalk": "^1.7.2",
     "next": "^11.0.0",
