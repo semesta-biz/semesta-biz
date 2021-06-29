@@ -89,7 +89,7 @@ const blog = () => {
                   <img
                     src="https://assets.website-files.com/5e835117fba7fd79f7b4001a/5e9f708b779fa20d0efbd429_image_02_transformacao.png" 
                     width="570px" height="646px"
-                    className="min-w-[570px]"
+                    className="lg:min-w-[570px]"
                   />
                 </div>
               </div>
