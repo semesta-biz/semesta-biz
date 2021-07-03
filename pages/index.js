@@ -1,6 +1,9 @@
 // import Image from 'next/image';
 // import ChartSvg from '../public/img/chart.svg';
+import { useCallback, useEffect, useRef, useState, Fragment } from 'react';
 import Head from 'next/head';
+import { motion } from "framer-motion";
+import { useViewportSpy } from 'beautiful-react-hooks';
 
 import Footer from '@/components/Footer';
 import Header from '@/components/Header-homepage';
@@ -31,9 +34,37 @@ const features = [
       'Want us to build your solution from the ground up? Don’t worry. We’ve got you covered, our deep engineering background means we love tech challenges.',
     icon: <span>💡</span>,
   },
-]
+];
+
+const variants = {
+  visible: {
+    transition: { staggerChildren: 0.07, delayChildren: 0.2 }
+  },
+  initial: {
+    transition: { staggerChildren: 0.05, staggerDirection: -1 }
+  }
+};
+
+const itemVariants = {
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      y: { stiffness: 1000, velocity: -100 }
+    }
+  },
+  initial: {
+    y: 50,
+    opacity: 0,
+    transition: {
+      y: { stiffness: 1000 }
+    }
+  }
+};
 
 const blog = () => {
+  const processRef = useRef();
+  const isProcessVisible = useViewportSpy(processRef);
   return (
     <>
       <Head>
@@ -73,7 +104,26 @@ const blog = () => {
       </Head>
       <div className="bg-gradient-to-r from-blue-400 dark:from-white to-pink-500 via-transparent dark:via-blue-600 animate-gradient-xy bg-auto">
         <Header navBarTitle={BLOG.title}/>
-        <header className={`relative max-w-screen-lg xl:max-w-screen-xl mx-auto ${
+        <motion.div
+          variants={{
+            initial: {
+              opacity: 0,
+              y: -100,
+              display: "none",
+            },
+            visible: {
+              opacity: 1,
+              y: 0,
+              display: "block",
+            },
+          }}
+          initial="initial"
+          animate="visible"
+          transition={{
+            duration: 1.0,
+          }}
+        >
+          <header className={`relative max-w-screen-lg xl:max-w-screen-xl mx-auto ${
             BLOG.font === 'serif' ? 'font-serif' : 'font-sans'
           }`}>
             <div className="px-4 sm:px-6 md:px-8 my-10 xl:my-8">
@@ -94,20 +144,57 @@ const blog = () => {
                 </div>
               </div>
             </div>
-        </header>
+          </header>
+        </motion.div>
+        
         <div className="py-12 bg-white dark:bg-black">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="lg:text-center">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" ref={processRef}>
+            <motion.div
+              className="lg:text-center"
+              variants={{
+                initial: {
+                  opacity: 0,
+                  y: 100,
+                  display: "none",
+                },
+                visible: {
+                  opacity: 1,
+                  y: 0,
+                  display: "block",
+                },
+              }}
+              initial="initial"
+              animate={isProcessVisible ? 'visible' : 'initial'}
+            >
               <h2 className="text-base text-blue-600 font-semibold tracking-wide uppercase">Process</h2>
               <p className="mt-4 max-w-2xl text-4xl text-gray-500 dark:text-gray-200 lg:mx-auto">
                 How we helped our clients
               </p>
-            </div>
+            </motion.div>
 
-            <div className="mt-10">
-              <dl className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
+            <motion.div
+              className="mt-10"
+              variants={{
+                initial: {
+                  opacity: 0,
+                  y: 100,
+                  display: "none",
+                },
+                visible: {
+                  opacity: 1,
+                  y: 0,
+                  display: "block",
+                },
+              }}
+              initial="initial"
+              animate={isProcessVisible ? 'visible' : 'initial'}
+              transition={{
+                duration: 1.0,
+              }}
+            >
+              <motion.dl variants={variants} className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
                 {features.map((feature) => (
-                  <div key={feature.name} className="relative">
+                  <motion.div key={feature.name} className="relative" variants={itemVariants}>
                     <dt>
                       <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-gray-50 text-3xl">
                         {feature.icon}
@@ -115,16 +202,16 @@ const blog = () => {
                       <p className="ml-16 text-lg leading-6 font-medium text-gray-900 dark:text-gray-200">{feature.name}</p>
                     </dt>
                     <dd className="mt-2 ml-16 text-base text-gray-500">{feature.description}</dd>
-                  </div>
+                  </motion.div>
                 ))}
-              </dl>
-            </div>
+              </motion.dl>
+            </motion.div>
           </div>
         </div>
       </div>
       
-      <img src="/img/chart.svg" />
-      <div className="bg-gray-50 dark:bg-gray-800 border-t border-b border-gray-50 mt-3">
+      <img src="/img/chart.svg" lazy="true" />
+      <div className="bg-gray-50 dark:bg-gray-800 border-t border-b border-gray-50 mt-6">
         <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
           <div>
             <span className="block text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl dark:text-white">Ongoing WordPress Development and Growth</span>
