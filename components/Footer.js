@@ -10,7 +10,7 @@ const Footer = ({ fullWidth }) => {
         !fullWidth ? 'max-w-2xl px-4' : 'px-4 md:px-24'
       }`}
     >
-      <hr className="border-gray-200 dark:border-gray-600" />
+      <hr className="border-gray-200 dark:border-transparent" />
       <div className="my-4">
         <div className="flex flex-col md:flex-row justify-between items-end">
           <div className="space-y-3">

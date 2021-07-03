@@ -1,6 +1,6 @@
 // import Image from 'next/image';
 // import ChartSvg from '../public/img/chart.svg';
-import { useCallback, useEffect, useRef, useState, Fragment } from 'react';
+import { useRef } from 'react';
 import Head from 'next/head';
 import { motion } from "framer-motion";
 import { useViewportSpy } from 'beautiful-react-hooks';
