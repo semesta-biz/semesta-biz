@@ -141,9 +141,9 @@ class MyDocument extends Document {
           </Script>
         </Head>
         <body className="bg-day dark:bg-night">
+        <noscript dangerouslySetInnerHTML={{ __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T5BBMSN" height="0" width="0" style="display:none;visibility:hidden"></iframe>`}}></noscript>
           <Main />
           <NextScript />
-          <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T5BBMSN" height="0" width="0" style={{display:'none', visibility:'hidden'}}></iframe></noscript>
         </body>
       </Html>
     )
