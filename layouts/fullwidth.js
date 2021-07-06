@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
 import dynamic from 'next/dynamic';
-import { NotionRenderer, Equation, Code, CollectionRow } from 'react-notion-x'
+import { NotionRenderer, Equation, Code, CollectionRow, Collection } from 'react-notion-x'
 
 import Container from '@/components/Container'
 import TagItem from '@/components/TagItem'
@@ -46,11 +46,11 @@ const FullWidthLayout = ({ children, blockMap, frontMatter, emailHash }) => {
       fullWidth={frontMatter.fullWidth}
     >
       <article>
-        <h1 className="font-bold text-3xl text-black dark:text-white mt-6 md:mt-0">
+        <h1 className="font-bold text-3xl text-black dark:text-white mt-6 md:mt-0 px-4 md:px-24">
           {frontMatter.title}
         </h1>
-        {frontMatter.type[0] !== 'Page' && (
-          <nav className="flex mt-7 items-start text-gray-500 dark:text-gray-400">
+        {frontMatter.type[0] !== 'page' && (
+          <nav className="flex mt-7 items-start text-gray-500 dark:text-gray-400 px-4 md:px-24">
             <div className="flex mb-4">
               <a href={BLOG.socialLink || '#'} className="flex">
                 <img
@@ -88,7 +88,8 @@ const FullWidthLayout = ({ children, blockMap, frontMatter, emailHash }) => {
               components={{
                 equation: Equation,
                 code: Code,
-                collectionRow: CollectionRow
+                collectionRow: CollectionRow,
+                collection: Collection
               }}
               mapPageUrl={mapPageUrl}
             />
