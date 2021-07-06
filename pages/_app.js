@@ -1,3 +1,5 @@
+import Script from 'next/script'
+
 import 'prismjs/themes/prism.css'
 import 'react-notion-x/src/styles.css'
 import 'katex/dist/katex.min.css'
@@ -12,18 +14,21 @@ const Gtag = dynamic(() => import('@/components/Gtag'), { ssr: false })
 
 function MyApp({ Component, pageProps }) {
   return (
-    <LocaleProvider>
-      <>
-        {BLOG.isProd && BLOG?.analytics?.provider === 'ackee' && (
-          <Ackee
-            ackeeServerUrl={BLOG.analytics.ackeeConfig.dataAckeeServer}
-            ackeeDomainId={BLOG.analytics.ackeeConfig.domainId}
-          />
-        )}
-        {BLOG.isProd && BLOG?.analytics?.provider === 'ga' && <Gtag />}
-        <Component {...pageProps} />
-      </>
-    </LocaleProvider>
+    <>
+      <Script src={`https://www.googletagmanager.com/gtm.js?id=GTM-T5BBMSN`} />
+      <LocaleProvider>
+        <>
+          {BLOG.isProd && BLOG?.analytics?.provider === 'ackee' && (
+            <Ackee
+              ackeeServerUrl={BLOG.analytics.ackeeConfig.dataAckeeServer}
+              ackeeDomainId={BLOG.analytics.ackeeConfig.domainId}
+            />
+          )}
+          {BLOG.isProd && BLOG?.analytics?.provider === 'ga' && <Gtag />}
+          <Component {...pageProps} />
+        </>
+      </LocaleProvider>
+    </>
   )
 }
 
