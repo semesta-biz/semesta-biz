@@ -159,9 +159,11 @@ const Header = () => {
                 </div>
               </div>
               <div className="py-6 px-5 space-y-6 flex justify-center bg-gray-100">
-                <a className="whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-blue-600 hover:bg-blue-700">
-                  Contact
-                </a>
+                <Link href="#chatraChatExpanded">
+                  <a className="whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-blue-600 hover:bg-blue-700">
+                    Contact
+                  </a>
+                </Link>
               </div>
             </div>
           </Popover.Panel>
