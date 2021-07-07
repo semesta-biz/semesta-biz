@@ -88,7 +88,7 @@ const FullWidthLayout = ({ children, blockMap, frontMatter, emailHash }) => {
               components={{
                 equation: Equation,
                 code: Code,
-                collectionRow: CollectionRow,
+                collectionRow: <div className="px-4 md:px-24"><CollectionRow /></div>,
                 collection: Collection
               }}
               mapPageUrl={mapPageUrl}
