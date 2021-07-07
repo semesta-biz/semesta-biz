@@ -67,6 +67,12 @@ pre[class*='language-'] {
   @apply w-auto;
   @apply px-0;
 }
+.notion-h {
+  @apply px-4 md:px-24;
+}
+.notion-row {
+  @apply px-4 md:px-24;
+}
 .notion-quote {
   padding: 0.2em 0.9em;
 }
