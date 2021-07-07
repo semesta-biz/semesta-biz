@@ -118,7 +118,7 @@ const ServicesPages = () => {
             <div className="relative lg:flex lg:justify-between md:items-center">
               <div className="pl-4 md:pl-24 pr-4 flex-shrink w-full md:w-1/2 z-10 md:z-auto">
                 <h1 className="text-2xl lg:text-5xl leading-none font-extrabold tracking-tight text-gray-900 mt-10 mb-8 sm:mt-14 sm:mb-10 dark:text-white ">An Integrated Web/App Consultancy & Development Solutions in Klang Valley.</h1>
-                <p className="text-xl">We'll help you build a fast and modern website, PWA, or ecommerce store that will bring you customers and stay on top of your competition. Top notch custom web development solutions aligned with your business goals.</p>
+                <p className="text-xl">We&apos;ll help you build a fast and modern website, PWA, or ecommerce store that will bring you customers and stay on top of your competition. Top notch custom web development solutions aligned with your business goals.</p>
                 <div className="flex flex-wrap space-y-4 sm:space-y-0 sm:space-x-4 my-10">
                   <a onClick={() => { window.Chatra('openChat', true) }} className="w-full sm:w-auto flex-none bg-gray-900 hover:bg-gray-700 text-white text-lg leading-6 font-semibold py-3 px-6 border border-transparent rounded-xl focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-gray-900 focus:outline-none transition-colors duration-200">Let&apos;s Talk</a>
                 </div>
