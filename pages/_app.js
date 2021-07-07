@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import dynamic from 'next/dynamic';
 
 import 'prismjs/themes/prism.css'
@@ -13,6 +14,16 @@ const Ackee = dynamic(() => import('@/components/Ackee'), { ssr: false })
 const Gtag = dynamic(() => import('@/components/Gtag'), { ssr: false })
 
 function MyApp({ Component, pageProps }) {
+
+  useEffect(() => {
+    window.ChatraSetup = {
+      colors: {
+        buttonText: '#ffffff',
+        buttonBg: '#25D366'
+      }
+    };
+  }, []);
+
   return (
     <LocaleProvider>
       <GoogleTagManager>
