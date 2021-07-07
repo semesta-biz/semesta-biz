@@ -2,12 +2,14 @@
 // import ChartSvg from '../public/img/chart.svg';
 import { useRef } from 'react';
 import Head from 'next/head';
+import dynamic from 'next/dynamic';
 import { motion } from "framer-motion";
 import { useViewportSpy } from 'beautiful-react-hooks';
 
-import Footer from '@/components/Footer';
-import Header from '@/components/Header-homepage';
 import BLOG from '@/blog.config';
+
+const Header = dynamic(() => import('@/components/Header-homepage'), { ssr: false });
+const Footer = dynamic(() => import('@/components/Footer'), { ssr: false });
 
 const features = [
   {

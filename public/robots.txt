@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://semesta-biz.vercel.app
+Host: https://semesta.biz
 
 # Sitemaps
-Sitemap: https://semesta-biz.vercel.app/sitemap.xml
+Sitemap: https://semesta.biz/sitemap.xml

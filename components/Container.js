@@ -1,9 +1,11 @@
-import Header from '@/components/Header-homepage'
-import Footer from '@/components/Footer'
-import BLOG from '@/blog.config'
-import Head from 'next/head'
-import PropTypes from 'prop-types'
-// import BlogPost from './BlogPost'
+import dynamic from 'next/dynamic';
+import Head from 'next/head';
+import PropTypes from 'prop-types';
+
+import BLOG from '@/blog.config';
+
+const Header = dynamic(() => import('@/components/Header-homepage'), { ssr: false });
+const Footer = dynamic(() => import('@/components/Footer'), { ssr: false });
 
 const Container = ({ children, layout, fullWidth, ...customMeta }) => {
   const url = BLOG.path.length ? `${BLOG.link}/${BLOG.path}` : BLOG.link
