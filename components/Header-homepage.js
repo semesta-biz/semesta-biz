@@ -11,6 +11,7 @@ const NavBar = () => {
   const links = [
     { id: 0, name: locale.NAV.INDEX, to: BLOG.path || '/about', show: true },
     { id: 1, name: locale.NAV.OURVALUES, to: '/our-values', show: true },
+    { id: 2, name: 'Services', to: '/services', show: true },
   ];
   return (
     <div className={`hidden md:flex flex-shrink-0`}>
@@ -152,6 +153,9 @@ const Header = () => {
                     </Link>
                     <Link href="/our-values">
                       <a className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">Our Values</a>
+                    </Link>
+                    <Link href="/services">
+                      <a className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">Services</a>
                     </Link>
                   </nav>
                 </div>
