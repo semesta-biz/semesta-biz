@@ -66,31 +66,26 @@ const Header = () => {
   }, []);
 
   useEffect(() => {
-    const observer = new window.IntersectionObserver(handler);
-    observer.observe(sentinalRef.current);
+    if (window) {
+      const observer = new window.IntersectionObserver(handler);
+      observer.observe(sentinalRef.current);
+    }
   }, [sentinalRef]);
 
   return (
     <>
       <div className="observer-element h-4" ref={sentinalRef}></div>
       <div ref={navRef} className="sticky -top-px z-30 transition-all ease-in duration-500 backdrop-filter backdrop-blur m-auto w-full flex flex-row justify-between items-center max-w-screen-lg px-4">
-        <div className="flex items-center">
-          <Link href="/">
-            <a>
-              <div>
-                <img 
-                  src="https://cdn.statically.io/gh/semesta-biz/semesta-biz/main/logo.png"
-                  width="64px"
-                  height="64px"
-                  className="min-w-[64px]"
-                />
-              </div>
-            </a>
-          </Link>
-          <p className="ml-2 font-medium text-xl dark:text-white">
-            {BLOG.title}
-          </p>
-        </div>
+        <Link href="/">
+          <a className="flex items-center">
+            <img 
+              src="https://cdn.statically.io/gh/semesta-biz/semesta-biz/main/logo.png"
+              width="64px"
+              height="64px"
+            />
+            <img src="/img/semesta_biz.png" className="w-48" />
+          </a>
+        </Link>
         <div className="-mr-2 -my-2 md:hidden">
           <button onClick={toggle} className="bg-black p-2 inline-flex items-center justify-center text-white hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
             <span className="sr-only">Open menu</span>
@@ -114,28 +109,23 @@ const Header = () => {
         >
           <Popover.Panel
             focus
-            className="fixed inset-0 top-px px-2 md:hidden z-50"
+            className="fixed inset-0 top-2 px-2 md:hidden z-50"
           >
             <div className="bg-white rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden divide-y-2 divide-gray-50">
               <div className="pt-5 pb-6 px-5">
                 <div className="flex items-center justify-between">
-                  <div className="flex items-center">
-                    <Link href="/">
-                      <a>
-                        <div>
-                          <img 
-                            src="https://cdn.statically.io/gh/semesta-biz/semesta-biz/main/logo.png"
-                            width="64px"
-                            height="64px"
-                            className="min-w-[64px]"
-                          />
-                        </div>
-                      </a>
-                    </Link>
-                    <p className="ml-2 font-medium text-md">
-                      {BLOG.title}
-                    </p>
-                  </div>
+                <div className="flex items-center">
+                  <Link href="/">
+                    <a>
+                      <img 
+                        src="https://cdn.statically.io/gh/semesta-biz/semesta-biz/main/logo.png"
+                        width="64px"
+                        height="64px"
+                      />
+                    </a>
+                  </Link>
+                  <img src="/img/semesta_biz.png" className="w-48" />
+                </div>
                   
                   <div className="-mr-2">
                     <button onClick={toggle} className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
@@ -162,7 +152,7 @@ const Header = () => {
               </div>
               <div className="py-6 px-5 space-y-6 flex justify-center bg-gray-100">
                 <a href="#chatraChatExpanded" className="whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-blue-600 hover:bg-blue-700">
-                  Contacts
+                  Free Consultation
                 </a>
               </div>
             </div>

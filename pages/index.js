@@ -1,5 +1,3 @@
-// import Image from 'next/image';
-// import ChartSvg from '../public/img/chart.svg';
 import { useRef } from 'react';
 import Head from 'next/head';
 import dynamic from 'next/dynamic';

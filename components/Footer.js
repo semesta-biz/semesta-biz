@@ -1,31 +1,18 @@
 import Link from 'next/link';
 
 import BLOG from '@/blog.config';
-import Vercel from '@/components/Vercel';
 
 const Footer = ({ fullWidth }) => {
   return (
     <div
-      className={`mt-6 flex-shrink-0 m-auto w-full text-gray-500 dark:text-gray-400 transition-all ${
-        !fullWidth ? 'max-w-2xl px-4' : 'px-4 md:px-24'
+      className={`mt-6 flex-shrink-0 m-auto w-full text-gray-500 dark:text-gray-400 transition-all xl:max-w-screen-xl ${
+        !fullWidth ? 'max-w-2xl px-4' : 'px-4 md:px-4'
       }`}
     >
-      <hr className="border-gray-200 dark:border-transparent" />
+      <hr className="border-gray-50 dark:border-transparent" />
       <div className="my-4">
-        <div className="flex flex-col md:flex-row justify-between items-end">
-          <div className="space-y-3">
-            <Link href="/">
-              <a>
-                <div>
-                  <img 
-                    src="https://cdn.statically.io/gh/semesta-biz/semesta-biz/main/logo.png"
-                    width="64px"
-                    height="64px"
-                    className="transform"
-                  />
-                </div>
-              </a>
-            </Link>
+        <div className="flex flex-col md:flex-row justify-between divide-y md:divide-y-0 md:divide-x lg:divide-x-0">
+          <div className="space-y-3 max-w-screen md:max-w-xl">
             <p className="leading-6">
               {BLOG.title} was founded as an information technology company in 2020 as to cope with the pandemic challenge. Now {BLOG.title} is a leading technical WordPress development agency with WordPress SaaS and large multisite network expertise and experienced contributors in its team.
             </p>
@@ -61,9 +48,22 @@ const Footer = ({ fullWidth }) => {
             </ul>         
           </div>
           
-          <div className="mt-3 md:mt-0 align-baseline">
-            Copyright 2020 - 2021 @ {BLOG.title} - All rights reserved / Proudly powered by <Vercel />
-            
+          <div className="pt-3 lg:pt-0 mt-3 md:mt-0 align-baseline text-xs space-y-3 px-40 md:px-0 md:pl-4 lg:pl-0 max-w-screen md:max-w-xs">
+            <div>
+              <Link href="/">
+                <a className="flex justify-center md:justify-start items-center">
+                  <img 
+                    src="https://cdn.statically.io/gh/semesta-biz/semesta-biz/main/logo.png"
+                    width="64px"
+                    height="64px"
+                  />
+                  <img src="/img/semesta_biz.png" className="w-48" />
+                </a>
+              </Link>
+              <p className="tracking-wider text-center lg:text-left pl-0 lg:pl-24 lining-nums text-gray-400">202001032266</p>
+            </div>
+            <address className="not-italic">No. 1-120, Tingkat 1, Jalan PUJ 3/8, Taman Puncak Jalil, 43300 Seri Kembangan, Selangor Darul Ehsan</address>
+            <p>Copyright 2020 - 2021 @ {BLOG.title} - All rights reserved</p>
           </div>
         </div>
       </div>
