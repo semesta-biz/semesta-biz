@@ -28,7 +28,7 @@ const features = [
 
 const variants = {
   visible: {
-    transition: { staggerChildren: 0.07, delayChildren: 0.2 }
+    transition: { staggerChildren: 0.07, delayChildren: 0.5 }
   },
   initial: {
     transition: { staggerChildren: 0.05, staggerDirection: -1 }
@@ -112,8 +112,8 @@ const ServicesPages = () => {
           }`}>
             <div className="relative lg:flex lg:justify-between md:items-center">
               <div className="pl-4 md:pl-24 pr-4 flex-shrink w-full md:w-1/2 z-10 md:z-auto">
-                <h1 className="text-2xl lg:text-5xl leading-none font-extrabold tracking-tight text-gray-900 mt-10 mb-8 sm:mt-14 sm:mb-10 dark:text-white ">An Integrated Web/App Consultancy & Development Solutions in Klang Valley.</h1>
-                <p className="text-xl">We&apos;ll help you build a 🚀 <mark className="bg-clip-text decoration-clone bg-gradient-to-b from-green-400 to-blue-500 text-transparent">fast</mark> and <mark className="bg-clip-text decoration-clone bg-gradient-to-b from-blue-400 to-pink-500 text-transparent">modern website</mark> or <mark className="bg-clip-text decoration-clone bg-gradient-to-b from-yellow-400 to-red-500 text-transparent">ecommerce store</mark> that will bring you customers and stay on top of your competition. Top notch custom web development solutions aligned with your business goals.</p>
+                <h1 className="text-2xl lg:text-5xl leading-none font-extrabold tracking-tight text-gray-900 mt-10 mb-8 sm:mt-14 sm:mb-10 dark:text-white">An Integrated Web/App Consultancy & Development Solutions in Klang Valley.</h1>
+                <p className="text-xl dark:text-white">We&apos;ll help you build a 🚀 <mark className="bg-clip-text decoration-clone bg-gradient-to-b from-green-400 to-blue-500 text-transparent">fast</mark> and <mark className="bg-clip-text decoration-clone bg-gradient-to-b from-blue-400 to-pink-500 text-transparent">modern website</mark> or <mark className="bg-clip-text decoration-clone bg-gradient-to-b from-yellow-400 to-red-500 text-transparent">ecommerce store</mark> that will bring you customers and stay on top of your competition. Top notch custom web development solutions aligned with your business goals.</p>
                 <div className="flex flex-wrap space-y-4 sm:space-y-0 sm:space-x-4 my-10">
                   <a onClick={() => { window.Chatra('openChat', true) }} className="w-full sm:w-auto flex-none bg-gray-900 hover:bg-gray-700 text-white text-lg leading-6 font-semibold py-3 px-6 border border-transparent rounded-xl focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-gray-900 focus:outline-none transition-colors duration-200">Let&apos;s Talk</a>
                 </div>
@@ -121,13 +121,21 @@ const ServicesPages = () => {
               <motion.div variants={variants} className="absolute inset-0 md:relative z-0 md:z-auto flex -space-x-96 space-y-12 py-10 overflow-hidden">
                 <motion.img
                   className="inline-block h-96 ring-10 ring-white rounded-lg shadow"
-                  src="https://images.unsplash.com/photo-1516383274235-5f42d6c6426d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1653&q=80"
+                  src="https://cdn.statically.io/gh/semesta-biz/semesta-biz/main/public/img/sm.png"
                   alt="analytics"
                   variants={itemVariants}
                 />
                 <motion.img
                   className="inline-block h-96 ring-10 ring-white rounded-lg shadow"
-                  src="https://cdn.statically.io/gh/semesta-biz/semesta-biz/main/public/img/sm.png"
+                  src="https://cdn.statically.io/gh/semesta-biz/semesta-biz/main/public/img/sm-new2.png"
+                  alt="Semesta Mart"
+                  height={384}
+                  width={569.5}
+                  variants={itemVariants}
+                />
+                <motion.img
+                  className="inline-block h-96 ring-10 ring-white rounded-lg shadow"
+                  src="https://cdn.statically.io/gh/semesta-biz/semesta-biz/main/public/img/sm-new.png"
                   alt="Semesta Mart"
                   height={384}
                   width={569.5}

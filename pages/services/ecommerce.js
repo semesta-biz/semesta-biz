@@ -180,7 +180,7 @@ const ServicesPages = () => {
           </header>
         </motion.div>
         
-        <div className="py-3 md:py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" ref={processRef}>
+        <div className="py-3 md:py-12 max-w-7xl xl:max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8" ref={processRef}>
           <h2 className="text-base text-blue-600 font-semibold tracking-wide uppercase text-center">Pricing</h2>
           <p className="mt-4 max-w-2xl text-4xl text-gray-500 dark:text-gray-200 lg:mx-auto text-center">
             Perfect for SMBs and enterprise
