@@ -86,9 +86,9 @@ const ServicesPages = () => {
         />
       </Head>
       <div className="relative">
-        <div className="z-0 absolute top-[60%] left-1/3 w-96 h-96 bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-50 animate-blob animation-delay-4000" />
-        <div className="z-0 absolute top-[62%] left-1/3 w-96 h-96 bg-purple-300 rounded-full mix-blend-overlay filter blur-xl opacity-50 animate-blob" />
-        <div className="z-0 absolute top-[60%] left-1/2 w-96 h-96 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-50 animate-blob animation-delay-2000" />
+        <div className="z-0 absolute top-[27%] md:top-[60%] left-1/4 md:left-1/3 w-32 h-32 lg:w-96 lg:h-96 bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-50 animate-blob animation-delay-4000" />
+        <div className="z-0 absolute top-[27%] md:top-[62%] right-1/4 md:left-1/3 w-32 h-32 lg:w-96 lg:h-96 bg-purple-300 rounded-full mix-blend-overlay filter blur-xl opacity-50 animate-blob" />
+        <div className="z-0 absolute top-[24%] md:top-[60%] left-1/2 w-32 h-32 lg:w-96 lg:h-96 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-50 animate-blob animation-delay-2000" />
         <Header navBarTitle={BLOG.title}/>
         <motion.div
           variants={{
@@ -115,32 +115,35 @@ const ServicesPages = () => {
                 <h1 className="text-2xl lg:text-5xl leading-none font-extrabold tracking-tight text-gray-900 mt-10 mb-8 sm:mt-14 sm:mb-10 dark:text-white">An Integrated Web/App Consultancy & Development Solutions in Klang Valley.</h1>
                 <p className="text-xl dark:text-white">We&apos;ll help you build a 🚀 <mark className="bg-clip-text decoration-clone bg-gradient-to-b from-green-400 to-blue-500 text-transparent">fast</mark> and <mark className="bg-clip-text decoration-clone bg-gradient-to-b from-blue-400 to-pink-500 text-transparent">modern website</mark> or <mark className="bg-clip-text decoration-clone bg-gradient-to-b from-yellow-400 to-red-500 text-transparent">ecommerce store</mark> that will bring you customers and stay on top of your competition. Top notch custom web development solutions aligned with your business goals.</p>
                 <div className="flex flex-wrap space-y-4 sm:space-y-0 sm:space-x-4 my-10">
-                  <a onClick={() => { window.Chatra('openChat', true) }} className="w-full sm:w-auto flex-none bg-gray-900 hover:bg-gray-700 text-white text-lg leading-6 font-semibold py-3 px-6 border border-transparent rounded-xl focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-gray-900 focus:outline-none transition-colors duration-200">Let&apos;s Talk</a>
+                  <a onClick={() => { window.Chatra('openChat', true) }} className="w-full sm:w-auto flex-none bg-gray-900 dark:bg-gray-700 hover:bg-gray-700 text-white text-lg leading-6 font-semibold py-3 px-6 border border-transparent rounded-xl focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-gray-900 focus:outline-none transition-colors duration-200">Let&apos;s Talk</a>
                 </div>
               </div>
-              <motion.div variants={variants} className="absolute inset-0 md:relative z-0 md:z-auto flex -space-x-96 space-y-12 py-10 overflow-hidden">
+              <motion.div variants={variants} className="absolute inset-0 md:relative z-0 md:z-auto flex md:py-10 overflow-hidden">
                 <motion.img
-                  className="inline-block h-96 ring-10 ring-white rounded-lg shadow"
+                  className="hidden md:inline-block h-80 rounded-lg shadow-lg ml-10"
                   src="https://cdn.statically.io/gh/semesta-biz/semesta-biz/main/public/img/sm.png"
                   alt="analytics"
+                  width={537}
+                  height={362}
                   variants={itemVariants}
                 />
                 <motion.img
-                  className="inline-block h-96 ring-10 ring-white rounded-lg shadow"
+                  className="hidden md:inline-block h-96 rounded-lg shadow mt-20 -ml-96"
+                  src="https://cdn.statically.io/gh/semesta-biz/semesta-biz/main/public/img/sm-new.png"
+                  alt="Semesta Mart homepage"
+                  height={337}
+                  width={570}
+                  variants={itemVariants}
+                />
+                <motion.img
+                  className="hidden md:inline-block h-75 rounded-lg shadow-lg mt-96 -ml-96"
                   src="https://cdn.statically.io/gh/semesta-biz/semesta-biz/main/public/img/sm-new2.png"
                   alt="Semesta Mart"
-                  height={384}
-                  width={569.5}
+                  height={390}
+                  width={563}
                   variants={itemVariants}
                 />
-                <motion.img
-                  className="inline-block h-96 ring-10 ring-white rounded-lg shadow"
-                  src="https://cdn.statically.io/gh/semesta-biz/semesta-biz/main/public/img/sm-new.png"
-                  alt="Semesta Mart"
-                  height={384}
-                  width={569.5}
-                  variants={itemVariants}
-                />
+                
               </motion.div>
             </div>
           </header>
