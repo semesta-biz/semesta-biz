@@ -48,7 +48,7 @@ const Footer = ({ fullWidth }) => {
             </ul>         
           </div>
           
-          <div className="pt-3 lg:pt-0 mt-3 md:mt-0 align-baseline text-xs space-y-3 px-40 md:px-0 md:pl-4 lg:pl-0 max-w-screen md:max-w-xs">
+          <div className="pt-3 lg:pt-0 mt-3 md:mt-0 align-baseline text-xs space-y-3 px-10 md:px-40 md:px-0 md:pl-4 lg:pl-0 max-w-screen md:max-w-xs">
             <div>
               <Link href="/">
                 <a className="flex justify-center md:justify-start items-center">

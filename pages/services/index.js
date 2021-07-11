@@ -129,8 +129,8 @@ const ServicesPages = () => {
                   className="inline-block h-96 ring-10 ring-white rounded-lg shadow"
                   src="https://cdn.statically.io/gh/semesta-biz/semesta-biz/main/public/img/sm.png"
                   alt="Semesta Mart"
-                  height="384px"
-                  width="569.5px"
+                  height={384}
+                  width={569.5}
                   variants={itemVariants}
                 />
               </motion.div>

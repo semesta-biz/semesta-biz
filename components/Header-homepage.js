@@ -42,6 +42,7 @@ const NavBar = () => {
 const Header = () => {
   const [open, setOpen] = useState(false);
   const navRef = useRef(null);
+  const logoRef = useRef(null);
   const sentinalRef = useRef([]);
   const handler = ([entry]) => {
     if (navRef && navRef.current) {
@@ -51,13 +52,18 @@ const Header = () => {
         // navRef.current.classList.remove('sticky-nav-full');
         navRef.current.classList.add('backdrop-filter');
         navRef.current.classList.add('backdrop-blur');
+        navRef.current.classList.remove('mt-3');
+        logoRef.current.classList.remove('scale-150');
+        logoRef.current.classList.remove('mx-4');
       } else {
         navRef.current.classList.add('xl:max-w-screen-2xl');
         navRef.current.classList.remove('xl:max-w-screen-xl');
         // navRef.current.classList.add('sticky-nav-full');
         navRef.current.classList.remove('backdrop-filter');
         navRef.current.classList.remove('backdrop-blur');
-        navRef.current.classList.remove('py-8');
+        navRef.current.classList.add('mt-3');
+        logoRef.current.classList.add('scale-150');
+        logoRef.current.classList.add('mx-4');
       }
     }
   };
@@ -79,11 +85,13 @@ const Header = () => {
         <Link href="/">
           <a className="flex items-center">
             <img 
+              ref={logoRef}
               src="https://cdn.statically.io/gh/semesta-biz/semesta-biz/main/logo.png"
               width="64px"
               height="64px"
+              className="transform transition-all w-16"
             />
-            <img src="/img/semesta_biz.png" className="w-48" />
+            <img src="/img/semesta_biz.png" className="w-48 hidden md:block" />
           </a>
         </Link>
         <div className="-mr-2 -my-2 md:hidden">

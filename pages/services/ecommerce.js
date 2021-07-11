@@ -3,24 +3,57 @@ import Head from 'next/head';
 // import Link from 'next/link';
 import dynamic from 'next/dynamic';
 import { motion } from "framer-motion";
-import { useViewportSpy } from 'beautiful-react-hooks';
 
 import BLOG from '@/blog.config';
 
 const Header = dynamic(() => import('@/components/Header-homepage'), { ssr: false });
 const Footer = dynamic(() => import('@/components/Footer'), { ssr: false });
 
-const features = [
+const plans = [
   {
-    name: 'eCommerce',
-    description:
-      'Drive sales with e-commerce experience. Gain market traction and grow',
-    cover: "https://images.unsplash.com/photo-1522204523234-8729aa6e3d5f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80",
+    name: 'B40',
+    price: '49.99',
+    features: [
+      (<><span className="inline-block md:hidden">Custom domain support</span><span>✅</span></>),
+      (<><span className="inline-block md:hidden">Product limit</span> <span>unlimited</span></>),
+      (<><span>10GB</span> <span className="inline-block md:hidden">storage</span></>),
+      (<><span>2</span> <span className="inline-block md:hidden">support staff</span></>),
+      (<><span className="mr-3">✅</span><span className="inline-block md:hidden">Bandwith</span></>),
+      (<><span className="mr-3">✅</span><span className="inline-block md:hidden">Sales page drag & drop builder</span></>),
+      (<><span className="mr-3">✅</span><span className="inline-block md:hidden">Theme editor (HTML/CSS/JS)</span></>),
+      (<><span className="mr-3">✅</span><span className="inline-block md:hidden">Minimum purchase checkout</span></>),
+      (<><span className="mr-3">✅</span><span className="inline-block md:hidden">Sokongan Payment Gateway</span></>),
+    ],
   },
   {
-    name: 'Corporate Websites',
-    description: 'Build a modern & blazing fast website deployed on global content delivery cloud',
-    cover: "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1650&q=80",
+    name: 'M40',
+    price: '79.99',
+    features: [
+      (<><span className="inline-block md:hidden">Custom domain support</span> <span>✅</span></>),
+      (<><span className="inline-block md:hidden">Product limit</span> <span>unlimited</span></>),
+      (<><span>20GB</span> <span className="inline-block md:hidden">storage</span></>),
+      (<><span>5</span> <span className="inline-block md:hidden">support staff</span></>),
+      (<><span className="mr-3">✅</span><span className="inline-block md:hidden">Bandwith</span></>),
+      (<><span className="mr-3">✅</span><span className="inline-block md:hidden">Sales page drag & drop builder</span></>),
+      (<><span className="mr-3">✅</span><span className="inline-block md:hidden">Theme editor (HTML/CSS/JS)</span></>),
+      (<><span className="mr-3">✅</span><span className="inline-block md:hidden">Minimum purchase checkout</span></>),
+      (<><span className="mr-3">✅</span><span className="inline-block md:hidden">Sokongan Payment Gateway</span></>),
+    ],
+  },
+  {
+    name: 'T20',
+    price: '99.99',
+    features: [
+      (<><span className="inline-block md:hidden">Custom domain support</span> <span>✅</span></>),
+      (<><span className="inline-block md:hidden">Product limit</span> <span>unlimited</span></>),
+      (<><span>30GB</span> <span className="inline-block md:hidden">storage</span></>),
+      (<><span>8</span> <span className="inline-block md:hidden">support staff</span></>),
+      (<><span className="mr-3">✅</span><span className="inline-block md:hidden">Bandwith</span></>),
+      (<><span className="mr-3">✅</span><span className="inline-block md:hidden">Sales page drag & drop builder</span></>),
+      (<><span className="mr-3">✅</span><span className="inline-block md:hidden">Theme editor (HTML/CSS/JS)</span></>),
+      (<><span className="mr-3">✅</span><span className="inline-block md:hidden">Minimum purchase checkout</span></>),
+      (<><span className="mr-3">✅</span><span className="inline-block md:hidden">Sokongan Payment Gateway</span></>),
+    ],
   },
 ];
 
@@ -52,7 +85,6 @@ const itemVariants = {
 
 const ServicesPages = () => {
   const processRef = useRef();
-  const isProcessVisible = useViewportSpy(processRef);
   return (
     <>
       <Head>
@@ -84,9 +116,9 @@ const ServicesPages = () => {
         />
       </Head>
       <div className="relative">
-        <div className="z-0 absolute top-[60%] left-1/3 w-96 h-96 bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-50 animate-blob animation-delay-4000" />
-        <div className="z-0 absolute top-[62%] left-1/3 w-96 h-96 bg-purple-300 rounded-full mix-blend-overlay filter blur-xl opacity-50 animate-blob" />
-        <div className="z-0 absolute top-[60%] left-1/2 w-96 h-96 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-50 animate-blob animation-delay-2000" />
+        <div className="z-0 absolute top-[27%] md:top-[60%] left-1/4 md:left-1/3 w-32 h-32 lg:w-96 lg:h-96 bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-50 animate-blob animation-delay-4000" />
+        <div className="z-0 absolute top-[27%] md:top-[62%] right-1/4 md:left-1/3 w-32 h-32 lg:w-96 lg:h-96 bg-purple-300 rounded-full mix-blend-overlay filter blur-xl opacity-50 animate-blob" />
+        <div className="z-0 absolute top-[24%] md:top-[60%] left-1/2 w-32 h-32 lg:w-96 lg:h-96 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-50 animate-blob animation-delay-2000" />
         <Header navBarTitle={`eCommerce &bull; ${BLOG.title}`} />
         <motion.div
           variants={{
@@ -108,27 +140,39 @@ const ServicesPages = () => {
           <header className={`relative ${
             BLOG.font === 'serif' ? 'font-serif' : 'font-sans'
           }`}>
-            <div className="relative lg:flex lg:justify-between md:items-center">
-              <div className="pl-4 md:pl-24 pr-4 flex-shrink w-full md:w-1/2 z-10 md:z-auto">
-                <h1 className="text-2xl lg:text-5xl leading-none font-extrabold tracking-tight text-gray-900 mt-10 mb-8 sm:mt-14 sm:mb-10 dark:text-white ">Everything <mark className="bg-clip-text decoration-clone bg-gradient-to-b from-yellow-400 to-red-500 text-transparent">eCommerce</mark> 🛒 in three simple plans.</h1>
-                <p className="text-xl">We&apos;ll help you build a 🚀 <mark className="bg-clip-text decoration-clone bg-gradient-to-b from-green-400 to-blue-500 text-transparent">fast</mark> and <mark className="bg-clip-text decoration-clone bg-gradient-to-b from-blue-400 to-pink-500 text-transparent">modern website</mark> or <mark className="bg-clip-text decoration-clone bg-gradient-to-b from-yellow-400 to-red-500 text-transparent">ecommerce store</mark> that will bring you customers and stay on top of your competition. Top notch custom web development solutions aligned with your business goals.</p>
-                <div className="flex flex-wrap space-y-4 sm:space-y-0 sm:space-x-4 my-10">
-                  <a onClick={() => { window.Chatra('openChat', true) }} className="w-full sm:w-auto flex-none bg-gray-900 hover:bg-gray-700 text-white text-lg leading-6 font-semibold py-3 px-6 border border-transparent rounded-xl focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-gray-900 focus:outline-none transition-colors duration-200">Let&apos;s Talk</a>
-                </div>
+            <div className="relative lg:flex lg:justify-around md:items-center">
+              <div className="pr-6 pl-6 md:pl-0 md:pr-4 flex-shrink w-full md:w-1/2 z-10 md:z-auto">
+                <h1 className="text-2xl lg:text-5xl leading-none font-extrabold tracking-tight text-gray-900 mt-10 sm:mt-14 mb-3 dark:text-white">
+                  <span>🛒</span><br />
+                  Everything <mark className="bg-clip-text decoration-clone bg-gradient-to-b from-yellow-400 to-red-500 text-transparent">eCommerce</mark> in three simple plans.
+                </h1>
+                <p className="text-xl dark:text-white">Take the guesswork out of managing your new or growing online business.</p>
+                <ul className="list-inside my-3 space-y-2 dark:text-white">
+                  <li className="flex space-x-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 flex-shrink-0 text-green-500" viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                    <span className="flex-grow">Improve planning with inventory management tools</span>
+                  </li>
+                  <li className="flex space-x-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 flex-shrink-0 text-green-500" viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                    <span className="flex-grow">Craft personalized shopping experiences with customer groups</span>
+                  </li>
+                  <li className="flex space-x-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 flex-shrink-0 text-green-500" viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                    <span className="flex-grow">Choose from leading shipping and payment providers to find your best fit solutions, without penalties</span>
+                  </li>
+                </ul>
               </div>
-              <motion.div variants={variants} className="absolute inset-0 md:relative z-0 md:z-auto flex -space-x-96 space-y-12 py-10 overflow-hidden">
+              <motion.div variants={variants} className="md:relative z-0 md:z-auto flex -space-x-96 space-y-12 py-10 overflow-hidden">
                 <motion.img
-                  className="inline-block h-96 ring-10 ring-white rounded-lg shadow"
-                  src="https://images.unsplash.com/photo-1516383274235-5f42d6c6426d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1653&q=80"
-                  alt="analytics"
-                  variants={itemVariants}
-                />
-                <motion.img
-                  className="inline-block h-96 ring-10 ring-white rounded-lg shadow"
-                  src="https://cdn.statically.io/gh/semesta-biz/semesta-biz/main/public/img/sm.png"
-                  alt="Semesta Mart"
-                  height="384px"
-                  width="569.5px"
+                  className="hidden md:inline-block h-96"
+                  src="/img/start-woo@2x.jpeg"
+                  alt="start woocommerce"
                   variants={itemVariants}
                 />
               </motion.div>
@@ -136,51 +180,67 @@ const ServicesPages = () => {
           </header>
         </motion.div>
         
-        <div className="py-12">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" ref={processRef}>
-            <h2 className="text-base text-blue-600 font-semibold tracking-wide uppercase text-center">What we do</h2>
-            <p className="mt-4 max-w-2xl text-4xl text-gray-500 dark:text-gray-200 lg:mx-auto text-center">
-              Perfect for SMBs and enterprise
-            </p>
-
-            <motion.div
-              className="mt-10"
-              variants={{
-                initial: {
-                  opacity: 0,
-                  y: 100,
-                  display: "none",
-                },
-                visible: {
-                  opacity: 1,
-                  y: 0,
-                  display: "block",
-                },
-              }}
-              initial="initial"
-              animate={isProcessVisible ? 'visible' : 'initial'}
-              transition={{
-                duration: 1.0,
-              }}
-            >
-              <motion.div variants={variants} className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
-                {features.map((feature) => (
-                  <motion.div key={feature.name} className="flex justify-center flex-col relative rounded shadow-xl h-96 bg-cover" variants={itemVariants} style={{ backgroundImage: `url(${feature.cover})`}}>
-                    <div className="bg-white bg-opacity-75 px-10">
-                      <p className="ml-4 mt-4 text-lg leading-6 font-medium text-gray-900 dark:text-gray-200">{feature.name}</p>
-                      <div className="mt-2 ml-4 mb-4 text-base text-gray-500">{feature.description}</div>
-                      <div className="flex justify-end ml-4 mb-4">
-                        <a
-                          onClick={() => { window.Chatra('openChat', true) }}
-                          className="w-full sm:w-auto flex-none bg-gray-900 hover:bg-gray-700 text-white text-lg leading-6 font-semibold py-3 px-6 border border-transparent rounded-xl focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-gray-900 focus:outline-none transition-colors duration-200">
-                            Learn
-                        </a>
-                      </div>
-                    </div>
-                  </motion.div>
-                ))}
-              </motion.div>
-            </motion.div>
+        <div className="py-3 md:py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" ref={processRef}>
+          <h2 className="text-base text-blue-600 font-semibold tracking-wide uppercase text-center">Pricing</h2>
+          <p className="mt-4 max-w-2xl text-4xl text-gray-500 dark:text-gray-200 lg:mx-auto text-center">
+            Perfect for SMBs and enterprise
+          </p>
+          <section className="flex flex-col lg:flex-row items-start items-center lg:justify-center w-full lg:px-10 md:py-12 relative space-y-3 md:space-y-0">
+            <article className="hidden md:block bg-white w-4/5 py-10 border-t border-transparent border-b rounded-b rounded-r-none">
+              <div className="max-h-[283px] text-center sticky top-[7%] backdrop-filter backdrop-blur mb-3">
+                <h5 className="font-bold text-gray-400 text-base">Pick a suitable plan</h5>
+                <h2 className="pb-4 flex justify-center font-bold">
+                  <span className="text-5xl proportional-nums">Plan Name</span>
+                </h2>
+              </div>
+              <ul className="divide-y space-y-3">
+                <li>Custom domain support</li>
+                <li className="pt-3">Product limit</li>
+                <li className="pt-3">Storage</li>
+                <li className="pt-3">Staff</li>
+                <li className="pt-3">Bandwith</li>
+                <li className="pt-3">Sales page drag & drop builder</li>
+                <li className="pt-3">Theme editor (HTML/CSS/JS)</li>
+                <li className="pt-3">Minimum purchase checkout</li>
+                <li className="pt-3">Sokongan Payment Gateway</li>
+              </ul>
+            </article>
+            {plans.map((plan) => (
+              <article key={plan.name} className="bg-white w-full md:w-4/5 py-10 border md:border-r-0 rounded-xl md:rounded-none first:rounded-l last:rounded-r-lg last:border-r">
+                <div className="max-h-[283px] sticky top-[9%] md:top-[7.5%] backdrop-filter backdrop-blur text-center">
+                  <h5 className="font-bold text-base">{plan.name}</h5>
+                  <h2 className="pb-4 flex justify-center font-bold">
+                    <span className="text-3xl mt-6 mr-1">RM</span>
+                    <span className="text-6xl proportional-nums"> {plan.price}</span>
+                  </h2>
+                </div>
+                <ul className="divide-y space-y-3 text-left md:text-center">
+                  {plan.features.map((feature, i) => (
+                    <li className="pt-3 px-3 first:pt-0" key={`${i}_${feature}`}>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </article>
+            ))}            
+          </section>
+        </div>
+      </div>
+      <div className="bg-gray-50 dark:bg-gray-800 border-t border-b border-gray-50 mt-6">
+        <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
+          <div>
+            <span className="block text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl dark:text-white">Your WooCommerce Development <span className="line-through text-gray-600">Company</span> Partner</span>
+            <p className="dark:text-gray-200">With us, you’ll get a tech partner that’s invested in your success.</p>
+          </div>
+          <div className="mt-8 flex lg:mt-0 lg:flex-shrink-0">
+            <div className="inline-flex rounded-md shadow">
+              <a
+                onClick={() => { window.Chatra('openChat', true) }}
+                className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
+              >
+                Get started
+              </a>
+            </div>
           </div>
         </div>
       </div>
