@@ -19,7 +19,7 @@ const features = [
     href: '/services/ecommerce'
   },
   {
-    name: 'Corporate Websites',
+    name: 'Websites / Application',
     description: 'Build a modern & blazing fast website deployed on global content delivery cloud',
     cover: "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1650&q=80",
     href: '/services/corporate-website'
