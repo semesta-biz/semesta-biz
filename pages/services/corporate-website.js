@@ -114,8 +114,13 @@ const CorporateWebsitePages = () => {
           Perfect for SMBs and enterprise
         </p>
         <section className="flex flex-col lg:flex-row items-start lg:justify-center w-full lg:px-10 md:py-12 relative space-y-3 md:space-y-0 space-x-0 md:space-x-3">
+          <article className="w-full md:w-1/5 py-10 sticky top-0">
+            <h5 className="text-3xl font-bold text-base">Pick Your Plan</h5>
+            <p>Simply choose the plan that&apos;s right for you</p>
+            <p className="my-6 text-sm">We believe the best products are created when we use agile best practices and work closely with our clients throughout the process to prioritize goals, incorporate feedback, and manage trade-offs.</p>
+          </article>
           {plans.map((plan) => (
-            <article key={plan.name} className="w-full md:w-1/5 py-10 border rounded-xl">
+            <article key={plan.name} className="w-full md:w-2/5 py-10 border border-pink-300 rounded-xl shadow-md">
               <div className="max-h-[283px] sticky top-0 backdrop-filter backdrop-blur text-center">
                 <h5 className="font-bold text-base">{plan.name}</h5>
                 <h2 className="pb-4 flex justify-center font-bold">
