@@ -21,7 +21,7 @@ const NavBar = () => {
             link.show && (
               <li
                 key={link.id}
-                className="block text-black dark:text-gray-50"
+                className="block text-black dark:bg-black dark:px-4 dark:py-2 dark:rounded-md dark:bg-opacity-20 dark:text-gray-50 dark:border dark:border-transparent dark:shadow-sm"
               >
                 <Link href={link.to}>
                   <a>{link.name}</a>
@@ -81,7 +81,7 @@ const Header = () => {
   return (
     <>
       <div className="observer-element h-4" ref={sentinalRef}></div>
-      <div ref={navRef} className="sticky -top-px z-30 transition-all ease-in duration-500 backdrop-filter backdrop-blur m-auto w-full flex flex-row justify-between items-center max-w-screen-lg px-4">
+      <div ref={navRef} className="sticky inset-0 z-30 transition-all ease-in duration-500 backdrop-filter backdrop-blur m-auto w-full flex justify-between items-center max-w-screen-lg px-4">
         <Link href="/">
           <a className="flex items-center">
             <img 
