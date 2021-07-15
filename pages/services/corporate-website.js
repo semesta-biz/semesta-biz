@@ -72,32 +72,6 @@ const features = [
   },
 ];
 
-// const variants = {
-//   visible: {
-//     transition: { staggerChildren: 0.07, delayChildren: 0.2 }
-//   },
-//   initial: {
-//     transition: { staggerChildren: 0.05, staggerDirection: -1 }
-//   }
-// };
-
-// const itemVariants = {
-//   visible: {
-//     y: 0,
-//     opacity: 1,
-//     transition: {
-//       y: { stiffness: 1000, velocity: -100 }
-//     }
-//   },
-//   initial: {
-//     y: -1000,
-//     opacity: 0,
-//     transition: {
-//       y: { stiffness: 1000 }
-//     }
-//   }
-// };
-
 const CorporateWebsitePages = () => {
   const processRef = useRef();
   return (

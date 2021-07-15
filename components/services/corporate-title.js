@@ -90,7 +90,9 @@ const CorporateHome = () => {
                 ref={lottieRef}
                 id="firstLottie"
                 src="/json/lf30_editor_hultmyav.json"
-                style={{ width: (elementDimensions.width + 45), height: (elementDimensions.height + 45) }}
+                loop
+                autoplay
+                style={{ width: (elementDimensions.width + 200), height: (elementDimensions.height + 200) }}
               />
             </div>
           </div>
