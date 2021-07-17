@@ -165,7 +165,7 @@ const CorporateWebsitePages = () => {
             <p className="my-6 text-sm">We believe the best products are created when we use agile best practices and work closely with our clients throughout the process to prioritize goals, incorporate feedback, and manage trade-offs.</p>
           </article>
           {plans.map((plan) => (
-            <article key={plan.name} className="w-full md:w-2/5 py-10 border border-pink-300 rounded-xl shadow-md bg-white">
+            <article key={plan.name} className="dark:text-gray-800 w-full md:w-2/5 py-10 border border-pink-300 rounded-xl shadow-md bg-white">
               <div className="max-h-[283px] sticky top-0 backdrop-filter backdrop-blur text-center">
                 <h5 className="font-bold text-base">{plan.name}</h5>
                 <h2 className="pb-4 flex justify-center font-bold">
