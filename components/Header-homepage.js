@@ -81,28 +81,30 @@ const Header = () => {
   return (
     <>
       <div className="observer-element h-4" ref={sentinalRef}></div>
-      <div ref={navRef} className="sticky inset-0 z-30 transition-all ease-in duration-500 backdrop-filter backdrop-blur m-auto w-full flex justify-between items-center max-w-screen-lg px-4">
-        <Link href="/">
-          <a className="flex items-center">
-            <img 
-              ref={logoRef}
-              src="https://cdn.statically.io/gh/semesta-biz/semesta-biz/main/logo.png"
-              width="64px"
-              height="64px"
-              className="transform transition-all w-16"
-            />
-            <img src="/img/semesta_biz.png" className="w-48 hidden md:block" />
-          </a>
-        </Link>
-        <div className="-mr-2 -my-2 md:hidden">
-          <button onClick={toggle} className="bg-black p-2 inline-flex items-center justify-center text-white hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
-            <span className="sr-only">Open menu</span>
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h8m-8 6h16" />
-            </svg>
-          </button>
+      <div className="sticky inset-0 z-30 backdrop-filter backdrop-blur">
+        <div ref={navRef} className="transition-all ease-in duration-500 m-auto w-full flex justify-between items-center max-w-screen-lg px-4">
+          <Link href="/">
+            <a className="flex items-center">
+              <img 
+                ref={logoRef}
+                src="https://cdn.statically.io/gh/semesta-biz/semesta-biz/main/logo.png"
+                width="64px"
+                height="64px"
+                className="transform transition-all w-16"
+              />
+              <img src="/img/semesta_biz.png" className="w-48 hidden md:block" />
+            </a>
+          </Link>
+          <div className="-mr-2 -my-2 md:hidden">
+            <button onClick={toggle} className="bg-black p-2 inline-flex items-center justify-center text-white hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+              <span className="sr-only">Open menu</span>
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h8m-8 6h16" />
+              </svg>
+            </button>
+          </div>
+          <NavBar open={open} />
         </div>
-        <NavBar open={open} />
       </div>
       <Popover>
         <Transition

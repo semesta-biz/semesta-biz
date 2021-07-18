@@ -19,7 +19,7 @@ const WavingPalm = () => (
       type: 'tween',
     }}
   >
-    👋
+    👋🏻
   </motion.div>
 );
 
