@@ -145,7 +145,7 @@ const blog = () => {
               animate={isProcessVisible ? 'visible' : 'initial'}
             >
               <h2 className="text-base text-blue-600 font-semibold tracking-wide uppercase">Process</h2>
-              <p className="mt-4 max-w-2xl text-4xl text-gray-500 dark:text-gray-200 lg:mx-auto">
+              <p className="mt-4 max-w-2xl text-4xl text-gray-500 lg:mx-auto">
                 How we helped our clients
               </p>
             </motion.div>
@@ -177,7 +177,7 @@ const blog = () => {
                       <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-gray-50 text-3xl">
                         {feature.icon}
                       </div>
-                      <p className="ml-16 text-lg leading-6 font-medium text-gray-900 dark:text-gray-200">{feature.name}</p>
+                      <p className="ml-16 text-lg leading-6 font-medium text-gray-900">{feature.name}</p>
                     </dt>
                     <dd className="mt-2 ml-16 text-base text-gray-500">{feature.description}</dd>
                   </motion.div>

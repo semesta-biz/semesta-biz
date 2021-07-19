@@ -85,10 +85,7 @@ const ServicesPages = () => {
           content="https://cdn.statically.io/gh/semesta-biz/semesta-biz/main/public/img/sm.png"
         />
       </Head>
-      <div className="relative">
-        <div className="z-0 absolute top-[27%] md:top-[60%] left-1/4 md:left-1/3 w-32 h-32 lg:w-96 lg:h-96 bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-50 animate-blob animation-delay-4000" />
-        <div className="z-0 absolute top-[27%] md:top-[62%] right-1/4 md:left-1/3 w-32 h-32 lg:w-96 lg:h-96 bg-purple-300 rounded-full mix-blend-overlay filter blur-xl opacity-50 animate-blob" />
-        <div className="z-0 absolute top-[24%] md:top-[60%] left-1/2 w-32 h-32 lg:w-96 lg:h-96 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-50 animate-blob animation-delay-2000" />
+      <div>
         <Header navBarTitle={BLOG.title}/>
         <motion.div
           variants={{
@@ -110,6 +107,9 @@ const ServicesPages = () => {
           <header className={`relative ${
             BLOG.font === 'serif' ? 'font-serif' : 'font-sans'
           }`}>
+          <div className="z-0 absolute top-[27%] md:top-[13%] left-1/4 md:left-auto md:right-0 w-32 h-32 lg:w-96 lg:h-96 bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob animation-delay-4000" />
+          <div className="z-0 absolute top-[27%] md:top-[22%] right-1/4 md:right-1/4 w-32 h-32 lg:w-96 lg:h-96 bg-purple-300 rounded-full mix-blend-overlay filter blur-xl opacity-50 animate-blob" />
+          <div className="z-0 absolute top-[24%] md:top-[33%] left-1/2 w-32 h-32 lg:w-96 lg:h-96 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-50 animate-blob animation-delay-2000" />
             <div className="relative lg:flex lg:justify-between md:items-center">
               <div className="pl-4 md:pl-24 pr-4 flex-shrink w-full md:w-1/2 z-10 md:z-auto">
                 <h1 className="text-2xl lg:text-5xl leading-none font-extrabold tracking-tight text-gray-900 mt-10 mb-8 sm:mt-14 sm:mb-10 dark:text-white">An Integrated Web/App Consultancy & Development Solutions in Klang Valley.</h1>
@@ -180,7 +180,7 @@ const ServicesPages = () => {
                 {features.map((feature) => (
                   <motion.div key={feature.name} className="flex justify-center flex-col relative rounded shadow-xl h-96 bg-cover" variants={itemVariants} style={{ backgroundImage: `url(${feature.cover})`}}>
                     <div className="bg-white bg-opacity-75 px-10">
-                      <p className="ml-4 mt-4 text-lg leading-6 font-medium text-gray-900 dark:text-gray-200">{feature.name}</p>
+                      <p className="ml-4 mt-4 text-lg leading-6 font-medium text-gray-900">{feature.name}</p>
                       <div className="mt-2 ml-4 mb-4 text-base text-gray-500">{feature.description}</div>
                       <div className="flex justify-end ml-4 mb-4">
                         <Link href={feature.href}>
