@@ -90,10 +90,10 @@ const CommerceHome = () => {
               <lottie-player
                 ref={lottieRef}
                 id="firstLottie"
-                src="/json/digital-marketing.json"
+                src="/json/worldwide-delivery.json"
                 loop
                 autoplay
-                style={{ width: elementDimensions.width, height: elementDimensions.height }}
+                style={{ width: elementDimensions.width, height: elementDimensions.height || 300 }}
               />
             </div>
           </div>

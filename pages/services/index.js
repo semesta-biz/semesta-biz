@@ -107,9 +107,9 @@ const ServicesPages = () => {
           <header className={`relative ${
             BLOG.font === 'serif' ? 'font-serif' : 'font-sans'
           }`}>
-          <div className="z-0 absolute top-[27%] md:top-[13%] left-1/4 md:left-auto md:right-0 w-32 h-32 lg:w-96 lg:h-96 bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob animation-delay-4000" />
-          <div className="z-0 absolute top-[27%] md:top-[22%] right-1/4 md:right-1/4 w-32 h-32 lg:w-96 lg:h-96 bg-purple-300 rounded-full mix-blend-overlay filter blur-xl opacity-50 animate-blob" />
-          <div className="z-0 absolute top-[24%] md:top-[33%] left-1/2 w-32 h-32 lg:w-96 lg:h-96 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-50 animate-blob animation-delay-2000" />
+          <div className="z-0 absolute top-[77%] md:top-[13%] left-1/4 md:left-auto right-auto md:right-1/3 w-32 h-32 lg:w-96 lg:h-96 bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob animation-delay-4000" />
+          <div className="z-0 absolute top-[77%] md:top-[22%] right-1/4 md:right-1/4 w-32 h-32 lg:w-96 lg:h-96 bg-purple-300 rounded-full mix-blend-overlay filter blur-xl opacity-50 animate-blob" />
+          <div className="z-0 absolute top-[74%] md:top-[33%] left-1/2 w-32 h-32 lg:w-96 lg:h-96 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-50 animate-blob animation-delay-2000" />
             <div className="relative lg:flex lg:justify-between md:items-center">
               <div className="pl-4 md:pl-24 pr-4 flex-shrink w-full md:w-1/2 z-10 md:z-auto">
                 <h1 className="text-2xl lg:text-5xl leading-none font-extrabold tracking-tight text-gray-900 mt-10 mb-8 sm:mt-14 sm:mb-10 dark:text-white">An Integrated Web/App Consultancy & Development Solutions in Klang Valley.</h1>
