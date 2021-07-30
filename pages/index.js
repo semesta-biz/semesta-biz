@@ -126,7 +126,7 @@ const blog = () => {
       </div>
       
       <div className="py-10 bg-white">
-        <img src="/img/chart.svg" lazy="true" />
+        <img src="/img/chart.svg" lazy="true" alt="work planned" />
       </div>
       <div className="bg-gray-50 dark:bg-gray-800 border-t border-b border-gray-50 mt-6">
         <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">

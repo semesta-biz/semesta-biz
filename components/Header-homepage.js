@@ -30,9 +30,9 @@ const NavBar = () => {
             )
         )}
         <li>
-            <a onClick={() => { window.Chatra('openChat', true) }} className="whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-blue-600 hover:bg-blue-700">
-              Contact
-            </a>
+          <a onClick={() => { window.Chatra('openChat', true) }} className="whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-blue-600 hover:bg-blue-700">
+            Contact
+          </a>
         </li>
       </ul>
     </div>
@@ -91,8 +91,9 @@ const Header = () => {
                 width="64px"
                 height="64px"
                 className="transform transition-all w-16"
+                alt="Semesta Biz"
               />
-              <img src="/img/semesta_biz.png" className="w-48 hidden md:block" />
+              <img src="https://cdn.statically.io/gh/semesta-biz/semesta-biz/main/public/img/semesta_biz.png" className="w-48 hidden md:block" alt="Semesta Biz" />
             </a>
           </Link>
           <div className="-mr-2 -my-2 md:hidden">
@@ -131,10 +132,11 @@ const Header = () => {
                         src="https://cdn.statically.io/gh/semesta-biz/semesta-biz/main/logo.png"
                         width="64px"
                         height="64px"
+                        alt="Semesta Biz"
                       />
                     </a>
                   </Link>
-                  <img src="/img/semesta_biz.png" className="w-48" />
+                  <img src="https://cdn.statically.io/gh/semesta-biz/semesta-biz/main/public/img/semesta_biz.png" className="w-48" alt="Semesta Biz" />
                 </div>
                   
                   <div className="-mr-2">

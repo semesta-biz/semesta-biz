@@ -1,19 +1,19 @@
-import { useEffect } from 'react'
-import { useRouter } from 'next/router'
+import { useEffect } from 'react';
+import { useRouter } from 'next/router';
 
-import * as gtm from '@/lib/gtag'
+import * as gtm from '@/lib/gtag';
 
 const GoogleTagManager = ({ children }) => {
   const router = useRouter()
 
   useEffect(() => {
-    router.events.on('routeChangeComplete', gtm.gtagpageview)
+    router.events.on('routeChangeComplete', gtm.gtagpageview);
     return () => {
-      router.events.off('routeChangeComplete', gtm.gtagpageview)
+      router.events.off('routeChangeComplete', gtm.gtagpageview);
     }
-  }, [router.events])
+  }, [router.events]);
 
-  return children
+  return children;
 }
 
 export default GoogleTagManager
