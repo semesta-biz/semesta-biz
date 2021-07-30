@@ -87,15 +87,13 @@ const Header = () => {
             <a className="flex items-center">
               <div ref={logoRef} className="transform transition-all">
                 <Image 
-                  src="https://cdn.statically.io/gh/semesta-biz/semesta-biz/main/logo.png"
+                  src="https://cdn.statically.io/gh/semesta-biz/sm-asset/03814cce/img/logo.webp"
                   width={96}
                   height={97.24}
-                  className="w-16"
                   alt="Semesta Biz"
-                  priority={true}
                 />
               </div>
-              {!isSmallScreen && <Image src="https://cdn.statically.io/gh/semesta-biz/semesta-biz/main/public/img/semesta_biz.png" alt="Semesta Biz" width={192} height={51} />}
+              {!isSmallScreen && <Image src="https://cdn.statically.io/gh/semesta-biz/sm-asset/03814cce/img/semesta_biz.webp" alt="Semesta Biz" width={192} height={51} priority={true} />}
             </a>
           </Link>
           <div className="-mr-2 -my-2 md:hidden">
@@ -130,17 +128,17 @@ const Header = () => {
                 <div className="flex items-center">
                   <Link href="/">
                     <a>
-                    <Image 
-                      src="https://cdn.statically.io/gh/semesta-biz/semesta-biz/main/logo.png"
-                      width={96}
-                      height={97.24}
-                      className="transform transition-all w-16"
-                      alt="Semesta Biz"
-                      priority={true}
-                    />
+                      <Image 
+                        src="https://cdn.statically.io/gh/semesta-biz/semesta-biz/main/logo.png"
+                        width={96}
+                        height={97.24}
+                        className="transform transition-all w-16"
+                        alt="Semesta Biz"
+                        priority={true}
+                      />
                     </a>
                   </Link>
-                  {isSmallScreen && <img src="https://cdn.statically.io/gh/semesta-biz/semesta-biz/main/public/img/semesta_biz.png" className="w-48 hidden md:block" alt="Semesta Biz" />}
+                  {!isSmallScreen && <Image src="https://cdn.statically.io/gh/semesta-biz/semesta-biz/main/public/img/semesta_biz.png" alt="Semesta Biz" width={192} height={51} priority={true} />}
                 </div>
                   
                   <div className="-mr-2">

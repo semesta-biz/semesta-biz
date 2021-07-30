@@ -1,7 +1,6 @@
 import { useRef } from 'react';
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
-import { motion } from "framer-motion";
 import Image from 'next/image';
 
 import chartSvg from "../public/img/chart.svg";
@@ -79,26 +78,7 @@ const blog = () => {
       </Head>
       <div className="bg-gradient-to-t from-gray-50 dark:from-white to-pink-50 via-blue-200 dark:via-blue-50 animate-gradient-y bg-auto">
         <Header navBarTitle={BLOG.title}/>
-        <motion.div
-          variants={{
-            initial: {
-              opacity: 0,
-              display: "none",
-            },
-            visible: {
-              opacity: 1,
-              display: "block",
-            },
-          }}
-          initial="initial"
-          animate="visible"
-          transition={{
-            duration: 1.0,
-          }}
-        >
-          <Hero />
-        </motion.div>
-        
+        <Hero />
         <div className="py-12">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" ref={processRef}>
             <div className="lg:text-center">
