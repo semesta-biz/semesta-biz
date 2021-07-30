@@ -1,7 +1,8 @@
 import { useCallback, useEffect, useRef, useState, Fragment } from 'react';
 import Link from 'next/link';
 import { Popover, Transition } from '@headlessui/react';
-// import Image from 'next/image';
+import Image from 'next/image';
+import { useMediaQuery } from 'beautiful-react-hooks';
 
 import BLOG from '@/blog.config';
 import { useLocale } from '@/lib/locale';
@@ -44,25 +45,24 @@ const Header = () => {
   const navRef = useRef(null);
   const logoRef = useRef(null);
   const sentinalRef = useRef([]);
+  const isSmallScreen = useMediaQuery('(max-width: 48rem)');
   const handler = ([entry]) => {
     if (navRef && navRef.current) {
       if (!entry.isIntersecting && entry !== undefined) {
         navRef.current.classList.remove('xl:max-w-screen-2xl');
         navRef.current.classList.add('xl:max-w-screen-xl');
-        // navRef.current.classList.remove('sticky-nav-full');
         navRef.current.classList.add('backdrop-filter');
         navRef.current.classList.add('backdrop-blur');
         navRef.current.classList.remove('mt-3');
-        logoRef.current.classList.remove('scale-150');
+        logoRef.current.classList.remove('scale-125');
         logoRef.current.classList.remove('mx-4');
       } else {
         navRef.current.classList.add('xl:max-w-screen-2xl');
         navRef.current.classList.remove('xl:max-w-screen-xl');
-        // navRef.current.classList.add('sticky-nav-full');
         navRef.current.classList.remove('backdrop-filter');
         navRef.current.classList.remove('backdrop-blur');
         navRef.current.classList.add('mt-3');
-        logoRef.current.classList.add('scale-150');
+        logoRef.current.classList.add('scale-125');
         logoRef.current.classList.add('mx-4');
       }
     }
@@ -85,15 +85,17 @@ const Header = () => {
         <div ref={navRef} className="transition-all ease-in duration-500 m-auto w-full flex justify-between items-center max-w-screen-lg px-4">
           <Link href="/">
             <a className="flex items-center">
-              <img 
-                ref={logoRef}
-                src="https://cdn.statically.io/gh/semesta-biz/semesta-biz/main/logo.png"
-                width="64px"
-                height="64px"
-                className="transform transition-all w-16"
-                alt="Semesta Biz"
-              />
-              <img src="https://cdn.statically.io/gh/semesta-biz/semesta-biz/main/public/img/semesta_biz.png" className="w-48 hidden md:block" alt="Semesta Biz" />
+              <div ref={logoRef} className="transform transition-all">
+                <Image 
+                  src="https://cdn.statically.io/gh/semesta-biz/semesta-biz/main/logo.png"
+                  width={96}
+                  height={97.24}
+                  className="w-16"
+                  alt="Semesta Biz"
+                  priority={true}
+                />
+              </div>
+              {!isSmallScreen && <Image src="https://cdn.statically.io/gh/semesta-biz/semesta-biz/main/public/img/semesta_biz.png" alt="Semesta Biz" width={192} height={51} />}
             </a>
           </Link>
           <div className="-mr-2 -my-2 md:hidden">
@@ -128,15 +130,17 @@ const Header = () => {
                 <div className="flex items-center">
                   <Link href="/">
                     <a>
-                      <img 
-                        src="https://cdn.statically.io/gh/semesta-biz/semesta-biz/main/logo.png"
-                        width="64px"
-                        height="64px"
-                        alt="Semesta Biz"
-                      />
+                    <Image 
+                      src="https://cdn.statically.io/gh/semesta-biz/semesta-biz/main/logo.png"
+                      width={96}
+                      height={97.24}
+                      className="transform transition-all w-16"
+                      alt="Semesta Biz"
+                      priority={true}
+                    />
                     </a>
                   </Link>
-                  <img src="https://cdn.statically.io/gh/semesta-biz/semesta-biz/main/public/img/semesta_biz.png" className="w-48" alt="Semesta Biz" />
+                  {isSmallScreen && <img src="https://cdn.statically.io/gh/semesta-biz/semesta-biz/main/public/img/semesta_biz.png" className="w-48 hidden md:block" alt="Semesta Biz" />}
                 </div>
                   
                   <div className="-mr-2">
