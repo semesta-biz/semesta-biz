@@ -57,32 +57,32 @@ module.exports = {
         },
         'gradient-y': {
           '0%, 100%': {
-              'background-size':'400% 400%',
-              'background-position': 'center top'
+            'background-size':'400% 400%',
+            'background-position': 'center top'
           },
           '50%': {
-              'background-size':'200% 200%',
-              'background-position': 'center center'
+            'background-size':'200% 200%',
+            'background-position': 'center center'
           }
         },
         'gradient-x': {
             '0%, 100%': {
-                'background-size':'200% 200%',
-                'background-position': 'left center'
+              'background-size':'200% 200%',
+              'background-position': 'left center'
             },
             '50%': {
-                'background-size':'200% 200%',
-                'background-position': 'right center'
+              'background-size':'200% 200%',
+              'background-position': 'right center'
             }
         },
         'gradient-xy': {
             '0%, 100%': {
-                'background-size':'400% 400%',
-                'background-position': 'left center'
+              'background-size':'400% 400%',
+              'background-position': 'left center'
             },
             '50%': {
-                'background-size':'200% 200%',
-                'background-position': 'right center'
+              'background-size':'200% 200%',
+              'background-position': 'right center'
             }
         }
       }

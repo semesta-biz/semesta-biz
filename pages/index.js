@@ -2,7 +2,6 @@ import { useRef } from 'react';
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
 import { motion } from "framer-motion";
-import { useViewportSpy } from 'beautiful-react-hooks';
 
 import BLOG from '@/blog.config';
 
@@ -37,35 +36,8 @@ const features = [
   },
 ];
 
-const variants = {
-  visible: {
-    transition: { staggerChildren: 0.07, delayChildren: 0.2 }
-  },
-  initial: {
-    transition: { staggerChildren: 0.05, staggerDirection: -1 }
-  }
-};
-
-const itemVariants = {
-  visible: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      y: { stiffness: 1000, velocity: -100 }
-    }
-  },
-  initial: {
-    y: 50,
-    opacity: 0,
-    transition: {
-      y: { stiffness: 1000 }
-    }
-  }
-};
-
 const blog = () => {
   const processRef = useRef();
-  const isProcessVisible = useViewportSpy(processRef);
   return (
     <>
       <Head>
@@ -127,52 +99,17 @@ const blog = () => {
         
         <div className="py-12">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" ref={processRef}>
-            <motion.div
-              className="lg:text-center"
-              variants={{
-                initial: {
-                  opacity: 0,
-                  y: 100,
-                  display: "none",
-                },
-                visible: {
-                  opacity: 1,
-                  y: 0,
-                  display: "block",
-                },
-              }}
-              initial="initial"
-              animate={isProcessVisible ? 'visible' : 'initial'}
-            >
+            <div className="lg:text-center">
               <h2 className="text-base text-blue-600 font-semibold tracking-wide uppercase">Process</h2>
               <p className="mt-4 max-w-2xl text-4xl text-gray-500 lg:mx-auto">
                 How we helped our clients
               </p>
-            </motion.div>
+            </div>
 
-            <motion.div
-              className="mt-10"
-              variants={{
-                initial: {
-                  opacity: 0,
-                  y: 100,
-                  display: "none",
-                },
-                visible: {
-                  opacity: 1,
-                  y: 0,
-                  display: "block",
-                },
-              }}
-              initial="initial"
-              animate={isProcessVisible ? 'visible' : 'initial'}
-              transition={{
-                duration: 1.0,
-              }}
-            >
-              <motion.dl variants={variants} className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
+            <div className="mt-10">
+              <dl className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
                 {features.map((feature) => (
-                  <motion.div key={feature.name} className="relative" variants={itemVariants}>
+                  <div key={feature.name} className="relative">
                     <dt>
                       <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-gray-50 text-3xl">
                         {feature.icon}
@@ -180,10 +117,10 @@ const blog = () => {
                       <p className="ml-16 text-lg leading-6 font-medium text-gray-900">{feature.name}</p>
                     </dt>
                     <dd className="mt-2 ml-16 text-base text-gray-500">{feature.description}</dd>
-                  </motion.div>
+                  </div>
                 ))}
-              </motion.dl>
-            </motion.div>
+              </dl>
+            </div>
           </div>
         </div>
       </div>

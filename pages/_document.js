@@ -85,7 +85,7 @@ class MyDocument extends Document {
           )}
 
           <link rel="icon" href="/favicon.ico" />
-          <link rel="icon" href="/favicon.svg" type="image/svg+xml"></link>
+          <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
           {BLOG.analytics && BLOG.analytics.provider === 'ackee' && (
             <script
               async
@@ -124,13 +124,13 @@ class MyDocument extends Document {
               <script
                 dangerouslySetInnerHTML={{
                   __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${BLOG.analytics.gaConfig.measurementId}', {
-              page_path: window.location.pathname,
-            });
-          `
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+                    gtag('config', '${BLOG.analytics.gaConfig.measurementId}', {
+                      page_path: window.location.pathname,
+                    });
+                  `
                 }}
               />
             </>
