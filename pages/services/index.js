@@ -7,6 +7,7 @@ import { useViewportSpy } from 'beautiful-react-hooks';
 
 import BLOG from '@/blog.config';
 
+const IsInView = dynamic(() => import('@/layout/component-is-in-view'), { ssr: false });
 const Header = dynamic(() => import('@/components/Header-homepage'), { ssr: false });
 const Footer = dynamic(() => import('@/components/Footer'), { ssr: false });
 
@@ -198,7 +199,9 @@ const ServicesPages = () => {
           </div>
         </div>
       </div>
-      <Footer fullWidth={true} />
+      <IsInView>
+        <Footer fullWidth={true} />
+      </IsInView>
     </>
   )
 }

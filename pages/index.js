@@ -7,6 +7,7 @@ import chartSvg from "../public/img/chart.svg";
 import BLOG from '@/blog.config';
 
 const Header = dynamic(() => import('@/components/Header-homepage'), { ssr: false });
+const IsInView = dynamic(() => import('@/layout/component-is-in-view'), { ssr: false });
 const Footer = dynamic(() => import('@/components/Footer'), { ssr: false });
 const Hero = dynamic(() => import('@/components/homepage-hero'), { ssr: false });
 
@@ -128,7 +129,9 @@ const blog = () => {
           </div>
         </div>
       </div>
-      <Footer fullWidth={true} />
+      <IsInView>
+        <Footer fullWidth={true} />
+      </IsInView>
     </>
   )
 }
